@@ -1,297 +1,35 @@
-
-%% bare_conf.tex
-%% V1.4b
-%% 2015/08/26
-%% by Michael Shell
-%% See:
-%% http://www.michaelshell.org/
-%% for current contact information.
-%%
-%% This is a skeleton file demonstrating the use of IEEEtran.cls
-%% (requires IEEEtran.cls version 1.8b or later) with an IEEE
-%% conference paper.
-%%
-%% Support sites:
-%% http://www.michaelshell.org/tex/ieeetran/
-%% http://www.ctan.org/pkg/ieeetran
-%% and
-%% http://www.ieee.org/
-
-%%*************************************************************************
-%% Legal Notice:
-%% This code is offered as-is without any warranty either expressed or
-%% implied; without even the implied warranty of MERCHANTABILITY or
-%% FITNESS FOR A PARTICULAR PURPOSE!
-%% User assumes all risk.
-%% In no event shall the IEEE or any contributor to this code be liable for
-%% any damages or losses, including, but not limited to, incidental,
-%% consequential, or any other damages, resulting from the use or misuse
-%% of any information contained here.
-%%
-%% All comments are the opinions of their respective authors and are not
-%% necessarily endorsed by the IEEE.
-%%
-%% This work is distributed under the LaTeX Project Public License (LPPL)
-%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
-%% distributed and modified. A copy of the LPPL, version 1.3, is included
-%% in the base LaTeX documentation of all distributions of LaTeX released
-%% 2003/12/01 or later.
-%% Retain all contribution notices and credits.
-%% ** Modified files should be clearly indicated as such, including  **
-%% ** renaming them and changing author support contact information. **
-%%*************************************************************************
-
-
-% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
-% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
-% *** with production work. The IEEE's font choices and paper sizes can   ***
-% *** trigger bugs that do not appear when using other class files.       ***                          ***
-% The testflow support page is at:
-% http://www.michaelshell.org/tex/testflow/
-
-
-
 \documentclass[a4paper,conference]{IEEEtran}
-% Some Computer Society conferences also require the compsoc mode option,
-% but others use the standard conference format.
-%
-% If IEEEtran.cls has not been installed into the LaTeX system files,
-% manually specify the path to it like:
-% \documentclass[conference]{../sty/IEEEtran}
 
+% Packages
+\usepackage[pdftex]{graphicx}				% Graphics
+\DeclareGraphicsExtensions{.pdf,.jpeg,.jpg,.png}
+\usepackage{tabularx}						% Tables
+\usepackage{amsmath}						% Math
+\usepackage{mathtools}						% Extra Mathematische Symbole
+\usepackage{algorithmic}					% Algorithmics
+\usepackage{cleveref}						% Citations
+\usepackage{bytefield}						% Bytefield
+\usepackage{tikz}							% tikz-figures
+\usetikzlibrary{positioning,arrows,automata}
 
-
-
-
-% Some very useful LaTeX packages include:
-% (uncomment the ones you want to load)
-
-
-% *** MISC UTILITY PACKAGES ***
-%
-%\usepackage{ifpdf}
-% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
-% compilation based on whether the output is pdf or dvi.
-% usage:
-% \ifpdf
-%   % pdf code
-% \else
-%   % dvi code
-% \fi
-% The latest version of ifpdf.sty can be obtained from:
-% http://www.ctan.org/pkg/ifpdf
-% Also, note that IEEEtran.cls V1.7 and later provides a builtin
-% \ifCLASSINFOpdf conditional that works the same way.
-% When switching from latex to pdflatex and vice-versa, the compiler may
-% have to be run twice to clear warning/error messages.
-
-
-
-
-
-
-% *** CITATION PACKAGES ***
-%
-%\usepackage{cite}
-% cite.sty was written by Donald Arseneau
-% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
-% \cite{} output to follow that of the IEEE. Loading the cite package will
-% result in citation numbers being automatically sorted and properly
-% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
-% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
-% \cite will automatically add leading space, if needed. Use cite.sty's
-% noadjust option (cite.sty V3.8 and later) if you want to turn this off
-% such as if a citation ever needs to be enclosed in parenthesis.
-% cite.sty is already installed on most LaTeX systems. Be sure and use
-% version 5.0 (2009-03-20) and later if using hyperref.sty.
-% The latest version can be obtained at:
-% http://www.ctan.org/pkg/cite
-% The documentation is contained in the cite.sty file itself.
-\usepackage{cleveref}
-
-
-
-
-
-
-% *** GRAPHICS RELATED PACKAGES ***
-%
-\usepackage[pdftex]{graphicx}
-\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
-\usepackage{tabularx}
-% graphicx was written by David Carlisle and Sebastian Rahtz. It is
-% required if you want graphics, photos, etc. graphicx.sty is already
-% installed on most LaTeX systems. The latest version and documentation
-% can be obtained at:
-% http://www.ctan.org/pkg/graphicx
-% Another good source of documentation is "Using Imported Graphics in
-% LaTeX2e" by Keith Reckdahl which can be found at:
-% http://www.ctan.org/pkg/epslatex
-%
-% latex, and pdflatex in dvi mode, support graphics in encapsulated
-% postscript (.eps) format. pdflatex in pdf mode supports graphics
-% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
-% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
-% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
-% which can result in "jaggedy"/blurry rendering of lines and letters as
-% well as large increases in file sizes.
-%
-% You can find documentation about the pdfTeX application at:
-% http://www.tug.org/applications/pdftex
-
-
-
-
-
-% *** MATH PACKAGES ***
-%
-%\usepackage{amsmath}
-% A popular package from the American Mathematical Society that provides
-% many useful and powerful commands for dealing with mathematics.
-%
-% Note that the amsmath package sets \interdisplaylinepenalty to 10000
-% thus preventing page breaks from occurring within multiline equations. Use:
-%\interdisplaylinepenalty=2500
-% after loading amsmath to restore such page breaks as IEEEtran.cls normally
-% does. amsmath.sty is already installed on most LaTeX systems. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/pkg/amsmath
-
-
-
-
-
-% *** SPECIALIZED LIST PACKAGES ***
-%
-%\usepackage{algorithmic}
-% algorithmic.sty was written by Peter Williams and Rogerio Brito.
-% This package provides an algorithmic environment fo describing algorithms.
-% You can use the algorithmic environment in-text or within a figure
-% environment to provide for a floating algorithm. Do NOT use the algorithm
-% floating environment provided by algorithm.sty (by the same authors) or
-% algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
-% algorithm float types and packages that provide these will not provide
-% correct IEEE style captions. The latest version and documentation of
-% algorithmic.sty can be obtained at:
-% http://www.ctan.org/pkg/algorithms
-% Also of interest may be the (relatively newer and more customizable)
-% algorithmicx.sty package by Szasz Janos:
-% http://www.ctan.org/pkg/algorithmicx
-
-
-
-
-% *** ALIGNMENT PACKAGES ***
-%
-%\usepackage{array}
-% Frank Mittelbach's and David Carlisle's array.sty patches and improves
-% the standard LaTeX2e array and tabular environments to provide better
-% appearance and additional user controls. As the default LaTeX2e table
-% generation code is lacking to the point of almost being broken with
-% respect to the quality of the end results, all users are strongly
-% advised to use an enhanced (at the very least that provided by array.sty)
-% set of table tools. array.sty is already installed on most systems. The
-% latest version and documentation can be obtained at:
-% http://www.ctan.org/pkg/array
-
-
-% IEEEtran contains the IEEEeqnarray family of commands that can be used to
-% generate multiline equations as well as matrices, tables, etc., of high
-% quality.
-
-
-
-
-% *** SUBFIGURE PACKAGES ***
-%\ifCLASSOPTIONcompsoc
-%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
-%\else
-%  \usepackage[caption=false,font=footnotesize]{subfig}
-%\fi
-% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
-% for subfigure.sty, the latter of which is no longer maintained and is
-% incompatible with some LaTeX packages including fixltx2e. However,
-% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
-% which will override IEEEtran.cls' handling of captions and this will result
-% in non-IEEE style figure/table captions. To prevent this problem, be sure
-% and invoke subfig.sty's "caption=false" package option (available since
-% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
-% handling of captions.
-% Note that the Computer Society format requires a larger sans serif font
-% than the serif footnote size font used in traditional IEEE formatting
-% and thus the need to invoke different subfig.sty package options depending
-% on whether compsoc mode has been enabled.
-%
-% The latest version and documentation of subfig.sty can be obtained at:
-% http://www.ctan.org/pkg/subfig
-
-
-
-
-% *** FLOAT PACKAGES ***
-%
-%\usepackage{fixltx2e}
-% fixltx2e, the successor to the earlier fix2col.sty, was written by
-% Frank Mittelbach and David Carlisle. This package corrects a few problems
-% in the LaTeX2e kernel, the most notable of which is that in current
-% LaTeX2e releases, the ordering of single and double column floats is not
-% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
-% single column figure to be placed prior to an earlier double column
-% figure.
-% Be aware that LaTeX2e kernels dated 2015 and later have fixltx2e.sty's
-% corrections already built into the system in which case a warning will
-% be issued if an attempt is made to load fixltx2e.sty as it is no longer
-% needed.
-% The latest version and documentation can be found at:
-% http://www.ctan.org/pkg/fixltx2e
-
-
-%\usepackage{stfloats}
-% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
-% the ability to do double column floats at the bottom of the page as well
-% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
-% LaTeX2e). It also provides a command:
-%\fnbelowfloat
-% to enable the placement of footnotes below bottom floats (the standard
-% LaTeX2e kernel puts them above bottom floats). This is an invasive package
-% which rewrites many portions of the LaTeX2e float routines. It may not work
-% with other packages that modify the LaTeX2e float routines. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/pkg/stfloats
-% Do not use the stfloats baselinefloat ability as the IEEE does not allow
-% \baselineskip to stretch. Authors submitting work to the IEEE should note
-% that the IEEE rarely uses double column equations and that authors should try
-% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
-% packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
-% such ways.
-% Do not attempt to use stfloats with fixltx2e as they are incompatible.
-% Instead, use Morten Hogholm'a dblfloatfix which combines the features
-% of both fixltx2e and stfloats:
-%
-% \usepackage{dblfloatfix}
-% The latest version can be found at:
-% http://www.ctan.org/pkg/dblfloatfix
-
-
-
-
-% *** PDF, URL AND HYPERLINK PACKAGES ***
-%
-%\usepackage{url}
-% url.sty was written by Donald Arseneau. It provides better support for
-% handling and breaking URLs. url.sty is already installed on most LaTeX
-% systems. The latest version and documentation can be obtained at:
-% http://www.ctan.org/pkg/url
-% Basically, \url{my_url_here}.
-
-
-
-
-% *** Do not adjust lengths that control margins, column widths, etc. ***
-% *** Do not use packages that alter fonts (such as pslatex).         ***
-% There should be no need to do such things with IEEEtran.cls V1.6 and later.
-% (Unless specifically asked to do so by the journal or conference you plan
-% to submit to, of course. )
+\begin{filecontents}{tcp.data}
+#Transmission round		Congestion Window Size
+1		1
+2		2
+3		4
+4		8
+5		16
+6		32
+7		16
+8		17
+9		18
+10		19
+11		20
+12		10
+13		5
+14		6
+15		7
+\end{filecontents}
 
 
 % correct bad hyphenation here
@@ -300,107 +38,165 @@
 \bibliographystyle{IEEEtran}
 
 \begin{document}
-%
+
 % paper title
-% Titles are generally capitalized except for words such as a, an, and, as,
-% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
-% not capitalized unless they are the first or last word of the title.
-% Linebreaks \\ can be used within to get better formatting as desired.
-% Do not put math or special symbols in the title.
 \title{The Origins of Congestion and\\Network Assisted End-to-End Congestion Control}
 
 
-% author names and affiliations
-% use a multiple column layout for up to three different
-% affiliations
+% author
 \author{\IEEEauthorblockN{Til Mohr}
-\IEEEauthorblockA{RWTH Aachen University\\
-til.mohr@rwth-aachen.de}}
-
-% conference papers do not typically use \thanks and this command
-% is locked out in conference mode. If really needed, such as for
-% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
-% after \documentclass
-
-% for over three affiliations, or if they all won't fit within the width
-% of the page, use this alternative format:
-%
-%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
-%Homer Simpson\IEEEauthorrefmark{2},
-%James Kirk\IEEEauthorrefmark{3},
-%Montgomery Scott\IEEEauthorrefmark{3} and
-%Eldon Tyrell\IEEEauthorrefmark{4}}
-%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
-%Georgia Institute of Technology,
-%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
-%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
-%Email: homer@thesimpsons.com}
-%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
-%Telephone: (800) 555--1212, Fax: (888) 555--1212}
-%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
-
-
-
+\IEEEauthorblockA{RWTH Aachen University\\til.mohr@rwth-aachen.de}}
 
 % use for special paper notices
 %\IEEEspecialpapernotice{(Invited Paper)}
 
-
-
-
 % make the title area
 \maketitle
-
-% no keywords
-
-
-
-
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
 
-
+\begin{abstract}
+This article presents the most common origins of network congestion, how different types of algorithms perceive and handle congestion and what obstacles they face.
+\end{abstract}
 
 \section{Introduction}
-- Nur Idee bisher!\\
-- Rolle des Internets / immer mehr Dienste laufen übers Internet  \textrightarrow{}  (VoiceOverIP...)  \textrightarrow{}  Umso wichtiger wird es, Congestion zu minimieren\\
-- Grafik finden, wie Congestion den Einzelnen betrifft (Packet Loss etc.)
+Congestion was, is and always will be a problem on the Internet, appearing in various forms with different symptoms causing minor, but also major challenges. Data sent over the internet is split up in smaller packets that all try to reach their destination the fastest, whether it is by going the shortest or the least congested route. In an optimal network all computers, servers etc. would have a direct link to each other, thus reducing the importance of bandwidth and  consequently removing the need for buffers at all. However, the larger the network would get, the amount of connections would grow quadratic.
+\\Networks today consist of network nodes (routers, switches, ...) which all try to route internet packets as quick as possible whilst keeping the required hardware to a minimum. Ideally there would be a steady flow of packets being transmitted at maximum rate. However, when a internet node receives a packet while the outgoing connection still is in use, the packet has to be stored in a buffer until the outgoing connection freed up again. Therefore, those storage units are essential to every node on a network, but without proper management even well-sized buffers could lead to network problems like packet-loss, jitter and connection delay \cite{appenzeller2004sizing}	.
+\\This paper will present origins of network congestion and analyze how different types of algorithms try to avoid and minimize congestion.
 
 \section{Origins of Congestion}
-- Wo und Wie entsteht Congestion (in Router/Switches Buffern etc.)
+With the ever-growing amount of internet services not only data-centers, but the whole internet in general face new problems with each packet sent. Therefore, the global reduction of those complications are an important task to improve the quality of all internet services. However, as it is for solving any problem, the origin of those problems must be identified first.
+\\Network delay can generally speaking be categorized into three different types of delay \cite{gettys2012bufferbloat}:
+
+\begin{itemize}
+\item 
+\textit{Transmission delay} describes the delay of transmitting data packets between two internet nodes. Typically, packets sent from a origin to a destination node are sent over various different internet nodes, all of which could have a different bandwidth. Therefore, a packet send from \textbf{node 1} to \textbf{node n} over \textbf{nodes 2 to n-1} cannot be sent at a faster rate than the lowest bandwidth on the packets path (bottleneck) [Figure \ref{fig:transmission delay}].\[Rate_{max} = \min\{bandwidth_{i}\mid i\in\{1,...,n-1\}\}\]
+
+\item
+\textit{Processing delay} is the time needed to process an individual packet by an internet node. This usually means processing the packets IP header, finding its destination and possibly queuing it in buffers.
+
+\item
+\textit{Queuing delay} is the time a package spent waiting for it to be processed or transmitted.
+\end{itemize}
+\begin{figure}
+	\begin{center}
+	\begin{tikzpicture}[->, >=latex, node distance = 1cm and 2.5cm, semithick]
+		% Nodes
+		\node[state] (A)  			   	{1};
+		\node[state] (B) [right=of A] 	{2};
+		\node[state] (C) [below=of B] 	{n-1};
+		\node[state] (D) [right=of C] 	{n};
+		%Arrows
+		\path	
+		(A) edge [above] node {$bandwidth_{1}$} (B)
+		(B) edge [dotted] (C)
+		(C) edge [above] node {$bandwidth_{n-1}$} (D)
+		;
+	\end{tikzpicture}
+	\end{center}
+	\caption{Path a packet takes through the network}
+	\label{fig:transmission delay}
+\end{figure}
+
+Whereas processing delay is almost not noticeable and transmission delay could be improved by upgrading cables or transmission protocols, queuing delay has various causes and therefore is the  most difficult one to reduce. There are many different ways to implement buffers in a network node and the effectiveness of each implementation varies from where it is used. Traffic in residential network nodes for example differ from nodes used in large data-centers in every aspect, thus hardware and software in those components should be adjusted accordingly.
+\\Sizing buffers is a complex task. On the one hand read and write times should as short as possible to minimize additional delay. On the other hand buffers should be as big as needed to be robust for future network changes and therefore store lots of data if needed while also keeping in mind the requirements congestion detection algorithms have in order to adjust for congestion accordingly \cite{staff2012bufferbloat}. Unifying those goals is very challenging as it leads to increasing costs and physical space occupied by those buffers. Additionally, a 2004 paper by Appenzeller found that 99\% of buffers in network nodes, which were sized on a rule-of-thumb rule based on the TCP protocol \cite{villamizar1994high}, could be removed without losing, but rather gaining performance \cite{appenzeller2004sizing}. Clearly, balancing speed and size is difficult and thus buffer sizes should be adjusted to their area of use accordingly.
+\begin{figure}
+  \centering
+    \includegraphics[width=0.9\linewidth]{figures/Throughput-Delay}
+  \caption{Relationship between throughput and delay \cite{gettys2012bufferbloat}}
+  \label{fig:throughput-delay-relationship}
+\end{figure}
+\\This isn't the only major cause of queuing delay. Without proper buffer management even nodes with well sized buffers will experience performance loss. Proper queue management is able to compensate for the unpredictable fluidity of network traffic. It is an difficult task to buffer the right amount of packages to keep transmission flow consistent over time.
+As the number of packets being transmitted grows, the \textit{throughput} of the network node increases until packets are being transmitted at bottleneck rate. After this, the transmission rate cannot increase anymore, which leads to packets being buffered along their path to prevent them being lost [Figure \ref{fig:throughput-delay-relationship}]\cite{gettys2012bufferbloat}. If the incoming amount of traffic keeps to exceed the amount of outgoing traffic, those buffers will fill up (\textit{over-buffering}), which will eventually lead to \textit{bufferbloat} \cite{Allman13commentson,6886125}.
+
+\subsection*{Bufferbloat}
+Bufferbloat refers to frequently full and excessively large buffers in internet nodes. This leads to partly unnecessary network delay and damages congestion avoidance algorithms, such as classic TCP \cite{gettys2012bufferbloat,chen2014bufferbloat}. Buffering is needed to provide space to queued packets waiting for transmission resulting in a minimization of packet loss. In the past however, buffer sizes were smaller than today's thus less packets could be queued and more were dropped, signaling transmission protocols the presence of congestion in this node, so those protocols can adjust. With memory getting cheaper over the years, buffers saw an increase in size. This has the negative impact, that more packets can be queued before any are dropped, thus those adjustments of congestion avoidance protocols kick in later than usual. Thus, buffers are being filled in the whole network which results in an extreme increase in network delay (\textit{latency}) and fluctuation (\textit{jitter}) \cite{gettys2012bufferbloat,staff2012bufferbloat,chen2014bufferbloat}.
+\\So Services, which require low latency at a high data-rate, such as Streaming, will experience a decrease in quality.
+
 
 \section{Congestion Avoidance}
-- Congestion Avoidance anhand TCP/IP erklären\\
- \textrightarrow{} Slow-Start\\
- \textrightarrow{} RoundTripTime\\
-- Vorteile (nur Softwareupdate) und Nachteile (ungenaue Messungen und nicht optimale Maßnahmen)
+As already mentioned, congestion detection algorithms make up an important part in congestion avoidance protocols. \textit{TCP} is such an protocol, based on the transport layer, which adapts its send rate according to available network bandwidth \cite{1209197,jacobson1992tcp}. To fully understand, how TCP's congestion avoidance algorithm functions, you will have to understand how TCP works. TCP lives on the transport layer. It communicates with the application layer via ports, splits up data into packets (and vice versa), and transmits those packages over the network with the use of the internet protocol, thus TCP is often also referred to as \textit{TCP/IP}. It is the interface between network components. Each of those communication packages have different purposes, but underlay the same structure - the protocol header. The TCP header is split up into multiple segments [Figure \ref{fig:TCP_Header}]\cite{jacobson1992tcp,huston2000tcp}:
+\begin{figure}
+\centering
+\begin{bytefield}[bitheight=2.2\baselineskip]{32}
+	\bitbox{16}{Source Port} & \bitbox{16}{Destination Port} \\
+	\bitbox{32}{Sequence Number} \\
+	\bitbox{32}{Acknowledgment Number} \\
+	\bitbox{4}{Data Offset} & \bitbox{6}{Reserved} &
+\bitbox{1}{\tiny U\\R\\G} & \bitbox{1}{\tiny A\\C\\K} &
+\bitbox{1}{\tiny P\\S\\H} & \bitbox{1}{\tiny R\\S\\T} &
+\bitbox{1}{\tiny S\\Y\\N} & \bitbox{1}{\tiny F\\I\\N} &
+\bitbox{16}{Window Size} \\
+\bitbox{16}{Checksum} & \bitbox{16}{Urgent Pointer} \\
+\bitbox{32}{Options} \\
+\bitbox{32}{Data}
+\end{bytefield}
+\caption{TCP Header}
+\label{fig:TCP_Header}
+\end{figure}
+\begin{itemize}
+\item \textit{Source Port} and \textit{Destination Port} specify the ports on which TCP should communicate with the application layer.
+
+\item The \textit{Sequence Numbers} and \textit{Acknowledgment Numbers} specify how much data has been sent so far. All bytes in a TCP connection are numbered in increasing order, with both sides of the connection keeping track of those numbers. This way packet loss can be detected.
+
+\item TCP can set six different bit-flags in its header. The most important one is the \textit{ACK} flag (Acknowledgement bit). It is used whenever a packet receives the destination and an acknowledgement packet has to be sent back. The \textit{SYN} and \textit{FIN} flags initialize and terminate a connection.
+
+\item The \textit{Window Size} is the maximum amount of data (in bytes) a receiver is willing to receive at any time. It is being negotiated at the initialization of a new connection and can only be negotiated again with the \textit{SYN} flag set. It is important to set it appropriately to prevent unnecessary packet loss or delay, as the receiver couldn't process the data in time \cite{jacobson1992tcp}.
+\end{itemize}
+TCP uses a handshake system. Whenever a client sends a data packet to the server, the server waits until it has received enough data (specified by the window size), and then sends back an acknowledgment package, signaling the successful transmission of data. There are also other handshake operations used, for example for establishing or terminating a connection, however those have no further importance to the congestion avoidance protocol \cite{1209197,jacobson1992tcp,huston2000tcp,jacobson1995congestion}.
+
+\subsection{Perceiving Congestion}
+Both partners of a connection are either a sender or a receiver. The sender keeps track of the time it takes from when a package sent until the acknowledgment is received. This is also known as \textit{round-trip time} (RTT), where a large RTT can indicate some congestion along the path. Some variances of TCP make use of this feature in their congestion avoidance algorithms, yet classic TCP does not \cite{huston2000tcp,jacobson1995congestion}. RTT also plays an very important role in the detection of packet loss, which further imply congestion. The sender side keeps track of the RTT while it is being measured and compares it to the \textit{retransmission timeout} (RTO) \cite{jacobson1992tcp}. RTO time is being calculated by estimating the mean and variance of the RTT. Whenever 	packets are not acknowledged within this RTO intervall, the package is being detected as lost and will be retransmitted. Therefore, it is essential to TCP performance, that the RTO is being determined accurately, as a too low RTO could prompt unnecessary retransmissions and too high RTO could slow down the application TCP is serving \cite{huston2000tcp,jacobson1995congestion}.\\
+Note however, a high RTT can also have other causes than packet loss or congestion. A short term drastic decrease in the receivers processing performance can lead to packets being buffered at the receivers end for a prolonged period of time, thus resulting in a higher RTT \cite{huston2000tcp}.
+
+\subsection{Adjusting for Congestion}
+To prevent congestion altogether, packet flow inside a network would have to be conservative, i.e. a new packet isn't being sent into the network before an old packet leaves the network. A connection in this state is also being described as being \textit{in equilibrium} \cite{jacobson1992tcp}. Whenever a connection is in equilibrium, congestion in the network cannot be caused by this TCP connection, thus also controlling congestion. TCPs congestion avoidance algorithm can be categorized into three sub-algorithms, that all have the goal to keep the connection in equilibrium, no matter how congestion was perceived. Here, a variable called \textit{congestion window} (cwnd) has an important role. It describes the maximum amount of packages send during a interval. An additional mechanism of keeping a connection in equilibrium is, that each acknowledgement package received by the sender opens the space for a new package to be sent into the network \cite{jacobson1992tcp}.
+
+\subsubsection*{Slow-Start}
+The \textit{slow-start} algorithm is used when a connection has just been established or when multiple packet losses were detected. The cwnd variable is set to one package per estimated RTT, because no information about network congestion has been collected yet. Whenever an acknowledgment package is being received, cwnd will increase by one package. This exponential growth in packages helps to get the packet send rate to the maximum the network can handle quite quickly, resulting in almost immediately maximum network performance \cite{jacobson1992tcp}. Slow-start will only increase if cwnd
+
+\subsubsection*{Adaption}
+When the network is congested, buffers in network nodes will fill up exponentially \cite{jacobson1992tcp}. Therefore, the network can only stabilize if the amount of packets sent decreases at least as quickly as the queues are growing. The formula \cite{jacobson1992tcp} \[cwnd_{i+1}=d*cwnd_{i}, 0<d<1\] has an exponential decrease over time, thus resulting in the network recovering.\\
+If the network isn't congested, the sender should try to raise cwnd slowly to reach the networks maximum throughput again. A multiplicative, exponential increase over time, like the slow-start algorithm isn't the best choice here. Increasing the amounts of packets sent drastically while cwnd still is high can result in the network being challenge the networks capacity, resulting in heavy congestion. Therefore, the best option to raise cwnd to its limits is an additive increase \cite{jacobson1992tcp}:\[cwnd_{i+1}=cwnd_{i} + u\] Van Jacobson proposes in his 1992 paper about TCP congestion avoidance that $d$ will be set to $\frac{1}{2}$ and $u$ will be set to $\frac{1}{cwnd_{i}}$. Thus, cwnd can only increase by a maximum of one packet per RTT leading to a smooth approach to the networks limit \cite{jacobson1992tcp}.
+
+\begin{figure}
+  \centering
+    \begin{tikzpicture}[y=.15cm, x=.45cm,font=\sffamily]
+    	% Ranges and dotted lines
+    	\fill[yellow!10]	(0,0) rectangle (6,35);
+    	\fill[red!10] 		(6,0) rectangle (7,35);
+    	\fill[green!10] 	(7,0) rectangle (11,35);
+    	\fill[red!10]		(11,0) rectangle (13,35);
+    	\fill[green!10]		(13,0) rectangle (15.3,35);
+    	\draw[dotted] 		(6,0) -- (6,35);
+    	\draw[dotted] 		(7,0) -- (7,35);
+    	\draw[dotted] 		(11,0) -- (11,35);
+    	\draw[dotted] 		(13,0) -- (13,35);
+    	% Axis
+    	\draw[->] 			(0,0) -- coordinate (x axis mid) (17,0);
+    	\draw[->] 			(0,0) -- coordinate (y axis mid) (0,35);
+    	% Labels
+    	\node[below=0.1cm] at (x axis mid) {\scriptsize Transmission round};
+    	\node[rotate=90, above=0.1cm] at (y axis mid) {\scriptsize Congestion window size};
+    	% Plot
+    	\draw plot[mark=*]
+    		file {tcp.data};
+    \end{tikzpicture}
+  \caption{TCP congestion avoidance protocols. Yellow represents the slow-start sequence, red and green symbolize detected congestion}
+  \label{fig:tcp_congestion_avoidance_protocols}
+\end{figure}
+
+
 
 \section{Network Assisted Congestion Control}
-- Congestion Control anhand von ECN (TCP/IP-Erweiterung) erklären\\
- \textrightarrow{} Bit im IP Header setzen + wie TCP damit umgeht\\
-  \textrightarrow{} Vorteile (genaue Maßnahmen) und Nachteile (erforderliche Hardware)\\
-- XCP (Verallgemeinerung von ECN)
+Congestion Control anhand von ECN (TCPIP-Erweiterung) erklaeren
+Bit im IP Header setzen + wie TCP damit umgeht
+Vorteile (genaue Maßnahmen) und Nachteile (erforderliche Hardware)
+XCP (Verallgemeinerung von ECN)
 \subsection*{DCTCP}
-- DCTCP + Warum nur in Data Center verwendet
+DCTCP + Warum nur in Data Center verwendet
 
 \section{Conclusion}
 
 \bibliography{references}
 
-% \begin{thebibliography}{1}
-%
-% \bibitem{IEEEhowto:kopka}
-% H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-%   0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-%
-% \end{thebibliography}
-
-% that's all folks
 \end{document}
