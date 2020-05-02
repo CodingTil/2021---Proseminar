@@ -12,7 +12,7 @@
 \usepackage{bytefield}						% Bytefield
 \usepackage{moeptikz}						% tikz-packages for networking symbols
 \usepackage{tikz}							% tikz-figures
-\usetikzlibrary{positioning,arrows,automata}
+\usetikzlibrary{decorations.pathreplacing,positioning,arrows,automata}
 \tikzstyle{line} = [draw,thick,-latex]
 \tikzstyle{transition} = [font=\small]
 
@@ -189,7 +189,7 @@ If the network isn't congested, the sender should try to raise cwnd slowly to re
 
 \begin{figure*}[tb]
 	\centering
-		\begin{tikzpicture}[->, >=latex, node distance = 2.5cm, semithick]
+		\begin{tikzpicture}[-, >=latex, node distance = 2.5cm, semithick]
 			%network
 			\node[client] (H1) {};
 			\node[router] (R1) [right=of H1] {};
@@ -250,11 +250,40 @@ Decoupling the feedback computation allows XCP to quickly acquire the maximum se
 
 \subsection{Evaluation of Network Assisted Congestion Control}
 As you can see, including the network layer to detect can have great performance improvements. 'Understanding XCP: Equilibrium and Fairness' has shown through simulations that many network topologies could benefit from XCP as it clears queues in equilibrium, thus resulting in improved network performance under load \cite{1498331}. Another paper has shown that XCP outperforms ordinary TCP in nearly any environment related to average queue lengths, efficiency and throughput \cite{katabi2002congestion}.
-\\However, all those performance comes with a cost. Since network nodes have to actively detect congestion, ECN, XCP and other network assisted congestion control protocols rely on active queue management in those nodes. Although most hardware being produced today meet those requirements, a large part of internet hardware isn't capable of doing so. Because any of those nodes can be congested, it would be counterintuitive to run those protocols, as congestion might or might not be detected, thus resulting in performance loss.
+\\However, all those performance comes with a cost. Since network nodes have to actively detect congestion, ECN, XCP and other network assisted congestion control protocols rely on active queue management in those nodes. Although most hardware being produced today meet those requirements, a large part of internet hardware isn't capable of doing so. Because any of those nodes can be congested, it would be counterintuitive to run those protocols, as congestion might or might not be detected, thus resulting in performance loss \cite{katabi2002congestion}.
 \\Nevertheless, whenever implementation of XCP, ECN or similar protocols is not a challenge, you can implement network assisted congestion control with ease and see great performance improvements. Especially smaller networks with high traffic could definitely benefit from those technologies.
 
 \subsection{DCTCP}
-A lot of internet services run in data centers with large amounts computers communicating with each other, resulting in a lots of traffic inside the data center. Optimizing those data centers networking capabilities can result in an increase of quality of services, which they are hosting. PAPER OF \textit{DCTCP} proposes a variation of TCP using ECN to create a data transportation protocol, which specially takes hardware purposed for use those environments into account.
+A lot of internet services run in data centers with large amounts computers communicating with each other, resulting in a lots of traffic inside the data center. Optimizing those data centers networking capabilities can result in an increase of quality of hosted services. In 2010 a paper proposed \textit{DCTCP}, a variation of TCP using ECN to create a data transportation protocol, which specially takes hardware purposed for use those environments into account \cite{10.1145/1851275.1851192}.\\
+The general problem that appears in high-traffic environments is the so called \textit{TCP Incast} problem.
+
+\begin{figure}
+	\centering
+		\begin{tikzpicture}[-, >=latex, node distance = 2.5cm, semithick, auto]
+			\node[router, scale=0.8] (Router) {};
+			\node (Internet) [right = 1.5cm of Router, text width=2cm] {\scriptsize Outgoing Connection};
+			\node[switch, scale=0.8] (Sw1) [below left = 0.8cm and 1cm of Router] {};
+			\node[switch, scale=0.8] (Sw2) [below right = 0.8cm and 1cm of Router] {};
+			\node[server, scale=1] (S1) [below left = 0.8cm and 0.25cm of Sw1] {\scriptsize Server};
+			\node[server, scale=1] (S2) [below = 2.1cm of Router] {\scriptsize Server};
+			\node[server, scale=1] (S3) [below right = 0.8cm and 0.25cm of Sw2] {\scriptsize Server};
+			
+			\draw[-] (Router) -- (Sw1);
+			\draw[-] (Router) -- (Sw2);
+			\draw[-, dotted] (Router) -- (Internet);
+			\draw[-] (Sw1) -- (S1);
+			\draw[-] (Sw1) -- (S2);
+			\draw[-] (Sw1) -- (S3);
+			\draw[-] (Sw2) -- (S1);
+			\draw[-] (Sw2) -- (S2);
+			\draw[-] (Sw2) -- (S3);
+			
+			\draw[decorate,decoration={brace,amplitude=10pt},xshift=-4pt,yshift=0pt] (S1.north -| S1.west) -- (Router.center -| S1.west) node [black,midway,xshift=-0.6cm,align=right] {\scriptsize High\\ \scriptsize'Fan-In'};
+		\end{tikzpicture}
+	\hspace{0.5cm}
+	\caption{Data Center High 'Fan-In'}
+	\label{fig:dc}
+\end{figure}
 
 \section{Conclusion}
 

@@ -97,4 +97,12 @@ S.~H. {Low}, L.~L.~H. {Andrew}, and B.~P. {Wydrowski}, ``Understanding xcp:
   Conference of the IEEE Computer and Communications Societies.}, vol.~2, 2005,
   pp. 1025--1036 vol. 2.
 
+\bibitem{10.1145/1851275.1851192}
+\BIBentryALTinterwordspacing
+M.~Alizadeh, A.~Greenberg, D.~A. Maltz, J.~Padhye, P.~Patel, B.~Prabhakar,
+  S.~Sengupta, and M.~Sridharan, ``Data center tcp (dctcp),'' \emph{SIGCOMM
+  Comput. Commun. Rev.}, vol.~40, no.~4, p. 63–74, Aug. 2010. [Online].
+  Available: \url{https://doi.org/10.1145/1851275.1851192}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

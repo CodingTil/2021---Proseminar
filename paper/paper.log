@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.1)  2 MAY 2020 16:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.1)  2 MAY 2020 22:33
 entering extended mode
 **./paper.tex
 (paper.tex
@@ -748,6 +748,25 @@ File: pgflibrarypatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \LineSpacing=\dimen298
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarydecorations.pathreplacing.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarydecorations.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduledecorations.code
+.tex"
+\pgfdecoratedcompleteddistance=\dimen299
+\pgfdecoratedremainingdistance=\dimen300
+\pgfdecoratedinputsegmentcompleteddistance=\dimen301
+\pgfdecoratedinputsegmentremainingdistance=\dimen302
+\pgf@decorate@distancetomove=\dimen303
+\pgf@decorate@repeatstate=\count308
+\pgfdecorationsegmentamplitude=\dimen304
+\pgfdecorationsegmentlength=\dimen305
+)
+\tikz@lib@dec@box=\box67
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/decorations\pgflibraryd
+ecorations.pathreplacing.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
 librarypositioning.code.tex"
 File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
@@ -758,7 +777,7 @@ File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryarrows.code.t
 ex"
 File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\arrowsize=\dimen299
+\arrowsize=\dimen306
 ))
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
 libraryautomata.code.tex"
@@ -771,26 +790,26 @@ File: tikzlibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/shapes\pgflibraryshapes
 .multipart.code.tex"
 File: pgflibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfnodepartlowerbox=\box67
-\pgfnodeparttwobox=\box68
-\pgfnodepartthreebox=\box69
-\pgfnodepartfourbox=\box70
-\pgfnodeparttwentybox=\box71
-\pgfnodepartnineteenbox=\box72
-\pgfnodeparteighteenbox=\box73
-\pgfnodepartseventeenbox=\box74
-\pgfnodepartsixteenbox=\box75
-\pgfnodepartfifteenbox=\box76
-\pgfnodepartfourteenbox=\box77
-\pgfnodepartthirteenbox=\box78
-\pgfnodeparttwelvebox=\box79
-\pgfnodepartelevenbox=\box80
-\pgfnodeparttenbox=\box81
-\pgfnodepartninebox=\box82
-\pgfnodeparteightbox=\box83
-\pgfnodepartsevenbox=\box84
-\pgfnodepartsixbox=\box85
-\pgfnodepartfivebox=\box86
+\pgfnodepartlowerbox=\box68
+\pgfnodeparttwobox=\box69
+\pgfnodepartthreebox=\box70
+\pgfnodepartfourbox=\box71
+\pgfnodeparttwentybox=\box72
+\pgfnodepartnineteenbox=\box73
+\pgfnodeparteighteenbox=\box74
+\pgfnodepartseventeenbox=\box75
+\pgfnodepartsixteenbox=\box76
+\pgfnodepartfifteenbox=\box77
+\pgfnodepartfourteenbox=\box78
+\pgfnodepartthirteenbox=\box79
+\pgfnodeparttwelvebox=\box80
+\pgfnodepartelevenbox=\box81
+\pgfnodeparttenbox=\box82
+\pgfnodepartninebox=\box83
+\pgfnodeparteightbox=\box84
+\pgfnodepartsevenbox=\box85
+\pgfnodepartsixbox=\box86
+\pgfnodepartfivebox=\box87
 )))
 
 LaTeX Warning: File `tcp.data' already exists on the system.
@@ -819,23 +838,23 @@ LaTeX Font Info:    ... okay on input line 45.
 -- Lines per column: 56 (exact).
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count308
-\scratchdimen=\dimen300
-\scratchbox=\box87
-\nofMPsegments=\count309
-\nofMParguments=\count310
+\scratchcounter=\count309
+\scratchdimen=\dimen307
+\scratchbox=\box88
+\nofMPsegments=\count310
+\nofMParguments=\count311
 \everyMPshowfont=\toks36
-\MPscratchCnt=\count311
-\MPscratchDim=\dimen301
-\MPnumerator=\count312
-\makeMPintoPDFobject=\count313
+\MPscratchCnt=\count312
+\MPscratchDim=\dimen308
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
 \everyMPtoPDFconversion=\toks37
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-\AtBeginShipoutBox=\box88
+\AtBeginShipoutBox=\box89
 Package hyperref Info: Link coloring OFF on input line 45.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
@@ -847,7 +866,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count314
+\c@section@level=\count315
 )
 LaTeX Info: Redefining \ref on input line 45.
 LaTeX Info: Redefining \pageref on input line 45.
@@ -862,74 +881,74 @@ X/2.9/pdftex/config/pdftex.map}
 
 
 ]
-\height=\dimen302
-\depth=\dimen303
-\totalheight=\dimen304
-\width=\dimen305
-\height=\dimen306
-\depth=\dimen307
-\totalheight=\dimen308
-\width=\dimen309
-\height=\dimen310
-\depth=\dimen311
-\totalheight=\dimen312
-\width=\dimen313
-\height=\dimen314
-\depth=\dimen315
-\totalheight=\dimen316
-\width=\dimen317
-\height=\dimen318
-\depth=\dimen319
-\totalheight=\dimen320
-\width=\dimen321
-\height=\dimen322
-\depth=\dimen323
-\totalheight=\dimen324
-\width=\dimen325
-\height=\dimen326
-\depth=\dimen327
-\totalheight=\dimen328
-\width=\dimen329
-\height=\dimen330
-\depth=\dimen331
-\totalheight=\dimen332
-\width=\dimen333
-\height=\dimen334
-\depth=\dimen335
-\totalheight=\dimen336
-\width=\dimen337
-\height=\dimen338
-\depth=\dimen339
-\totalheight=\dimen340
-\width=\dimen341
-\height=\dimen342
-\depth=\dimen343
-\totalheight=\dimen344
-\width=\dimen345
-\height=\dimen346
-\depth=\dimen347
-\totalheight=\dimen348
-\width=\dimen349
-\height=\dimen350
-\depth=\dimen351
-\totalheight=\dimen352
-\width=\dimen353
-\height=\dimen354
-\depth=\dimen355
-\totalheight=\dimen356
-\width=\dimen357
-\height=\dimen358
-\depth=\dimen359
-\totalheight=\dimen360
-\width=\dimen361
-\height=\dimen362
-\depth=\dimen363
-\totalheight=\dimen364
-\width=\dimen365
-\height=\dimen366
-\depth=\dimen367
-\totalheight=\dimen368
-\width=\dimen369
+\height=\dimen309
+\depth=\dimen310
+\totalheight=\dimen311
+\width=\dimen312
+\height=\dimen313
+\depth=\dimen314
+\totalheight=\dimen315
+\width=\dimen316
+\height=\dimen317
+\depth=\dimen318
+\totalheight=\dimen319
+\width=\dimen320
+\height=\dimen321
+\depth=\dimen322
+\totalheight=\dimen323
+\width=\dimen324
+\height=\dimen325
+\depth=\dimen326
+\totalheight=\dimen327
+\width=\dimen328
+\height=\dimen329
+\depth=\dimen330
+\totalheight=\dimen331
+\width=\dimen332
+\height=\dimen333
+\depth=\dimen334
+\totalheight=\dimen335
+\width=\dimen336
+\height=\dimen337
+\depth=\dimen338
+\totalheight=\dimen339
+\width=\dimen340
+\height=\dimen341
+\depth=\dimen342
+\totalheight=\dimen343
+\width=\dimen344
+\height=\dimen345
+\depth=\dimen346
+\totalheight=\dimen347
+\width=\dimen348
+\height=\dimen349
+\depth=\dimen350
+\totalheight=\dimen351
+\width=\dimen352
+\height=\dimen353
+\depth=\dimen354
+\totalheight=\dimen355
+\width=\dimen356
+\height=\dimen357
+\depth=\dimen358
+\totalheight=\dimen359
+\width=\dimen360
+\height=\dimen361
+\depth=\dimen362
+\totalheight=\dimen363
+\width=\dimen364
+\height=\dimen365
+\depth=\dimen366
+\totalheight=\dimen367
+\width=\dimen368
+\height=\dimen369
+\depth=\dimen370
+\totalheight=\dimen371
+\width=\dimen372
+\height=\dimen373
+\depth=\dimen374
+\totalheight=\dimen375
+\width=\dimen376
  [2]
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 1
 76.
@@ -949,23 +968,23 @@ Before submitting the final camera ready copy, remember to:
  process uses the appropriate paper size.
 
 [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 263.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 263.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 292.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 292.
  (paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 263.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 263.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 292.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 292.
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 9A00BCF7C32D02C59B012A306949BA65;668.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 263.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 292.
  ) 
 Here is how much of TeX's memory you used:
- 22404 strings out of 480930
- 453701 string characters out of 2909537
- 769253 words of memory out of 3000000
- 37831 multiletter control sequences out of 15000+200000
- 571197 words of font info for 89 fonts, out of 3000000 for 9000
+ 22943 strings out of 480930
+ 470845 string characters out of 2909537
+ 809031 words of memory out of 3000000
+ 38354 multiletter control sequences out of 15000+200000
+ 572275 words of font info for 90 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 68i,14n,287p,1516b,1074s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,14n,290p,1516b,1118s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
@@ -977,9 +996,9 @@ s/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
 /MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times
 /utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (5 pages, 191854 bytes).
+Output written on paper.pdf (5 pages, 216244 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 278 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
 
