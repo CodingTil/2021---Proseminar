@@ -70,4 +70,31 @@ G.~Huston, ``Tcp performance,'' \emph{The Internet Protocol Journal}, vol.~3,
 V.~Jacobson, ``Congestion avoidance and control,'' \emph{ACM SIGCOMM Computer
   Communication Review}, vol.~25, no.~1, pp. 157--187, 1995.
 
+\bibitem{ramakrishnan1999proposal}
+K.~Ramakrishnan and S.~Floyd, ``A proposal to add explicit congestion
+  notification (ecn) to ip,'' RFC 2481, January, Tech. Rep., 1999.
+
+\bibitem{ramakrishnan2001addition}
+K.~Ramakrishnan, S.~Floyd, D.~Black \emph{et~al.}, ``The addition of explicit
+  congestion notification (ecn) to ip,'' 2001.
+
+\bibitem{10.1145/205511.205512}
+\BIBentryALTinterwordspacing
+S.~Floyd, ``Tcp and explicit congestion notification,'' \emph{SIGCOMM Comput.
+  Commun. Rev.}, vol.~24, no.~5, p. 8–23, Oct. 1994. [Online]. Available:
+  \url{https://doi.org/10.1145/205511.205512}
+\BIBentrySTDinterwordspacing
+
+\bibitem{katabi2002congestion}
+D.~Katabi, M.~Handley, and C.~Rohrs, ``Congestion control for high
+  bandwidth-delay product networks,'' in \emph{Proceedings of the 2002
+  conference on Applications, technologies, architectures, and protocols for
+  computer communications}, 2002, pp. 89--102.
+
+\bibitem{1498331}
+S.~H. {Low}, L.~L.~H. {Andrew}, and B.~P. {Wydrowski}, ``Understanding xcp:
+  equilibrium and fairness,'' in \emph{Proceedings IEEE 24th Annual Joint
+  Conference of the IEEE Computer and Communications Societies.}, vol.~2, 2005,
+  pp. 1025--1036 vol. 2.
+
 \end{thebibliography}

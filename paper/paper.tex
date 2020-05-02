@@ -7,11 +7,16 @@
 \usepackage{amsmath}						% Math
 \usepackage{mathtools}						% Extra Mathematische Symbole
 \usepackage{algorithmic}					% Algorithmics
+\usepackage{hyperref}						% More references
 \usepackage{cleveref}						% Citations
 \usepackage{bytefield}						% Bytefield
+\usepackage{moeptikz}						% tikz-packages for networking symbols
 \usepackage{tikz}							% tikz-figures
 \usetikzlibrary{positioning,arrows,automata}
+\tikzstyle{line} = [draw,thick,-latex]
+\tikzstyle{transition} = [font=\small]
 
+% data for figure
 \begin{filecontents}{tcp.data}
 #Transmission round		Congestion Window Size
 1		1
@@ -69,7 +74,7 @@ With the ever-growing amount of internet services not only data-centers, but the
 
 \begin{itemize}
 \item 
-\textit{Transmission delay} describes the delay of transmitting data packets between two internet nodes. Typically, packets sent from a origin to a destination node are sent over various different internet nodes, all of which could have a different bandwidth. Therefore, a packet send from \textbf{node 1} to \textbf{node n} over \textbf{nodes 2 to n-1} cannot be sent at a faster rate than the lowest bandwidth on the packets path (bottleneck) [Figure \ref{fig:transmission delay}].\[Rate_{max} = \min\{bandwidth_{i}\mid i\in\{1,...,n-1\}\}\]
+\textit{Transmission delay} describes the delay of transmitting data packets between two internet nodes. Typically, packets sent from a origin to a destination node are sent over various different internet nodes, all of which could have a different bandwidth. Therefore, a packet send from \textbf{node 1} to \textbf{node n} over \textbf{nodes 2 to n-1} cannot be sent at a faster rate than the lowest bandwidth on the packets path (bottleneck) [Figure \ref{fig:transmission delay}].\[Rate_{max} \leftarrow \min\{bandwidth_{i}\mid i\in\{1,...,n-1\}\}\]
 
 \item
 \textit{Processing delay} is the time needed to process an individual packet by an internet node. This usually means processing the packets IP header, finding its destination and possibly queuing it in buffers.
@@ -99,14 +104,8 @@ With the ever-growing amount of internet services not only data-centers, but the
 
 Whereas processing delay is almost not noticeable and transmission delay could be improved by upgrading cables or transmission protocols, queuing delay has various causes and therefore is the  most difficult one to reduce. There are many different ways to implement buffers in a network node and the effectiveness of each implementation varies from where it is used. Traffic in residential network nodes for example differ from nodes used in large data-centers in every aspect, thus hardware and software in those components should be adjusted accordingly.
 \\Sizing buffers is a complex task. On the one hand read and write times should as short as possible to minimize additional delay. On the other hand buffers should be as big as needed to be robust for future network changes and therefore store lots of data if needed while also keeping in mind the requirements congestion detection algorithms have in order to adjust for congestion accordingly \cite{staff2012bufferbloat}. Unifying those goals is very challenging as it leads to increasing costs and physical space occupied by those buffers. Additionally, a 2004 paper by Appenzeller found that 99\% of buffers in network nodes, which were sized on a rule-of-thumb rule based on the TCP protocol \cite{villamizar1994high}, could be removed without losing, but rather gaining performance \cite{appenzeller2004sizing}. Clearly, balancing speed and size is difficult and thus buffer sizes should be adjusted to their area of use accordingly.
-\begin{figure}
-  \centering
-    \includegraphics[width=0.9\linewidth]{figures/Throughput-Delay}
-  \caption{Relationship between throughput and delay \cite{gettys2012bufferbloat}}
-  \label{fig:throughput-delay-relationship}
-\end{figure}
 \\This isn't the only major cause of queuing delay. Without proper buffer management even nodes with well sized buffers will experience performance loss. Proper queue management is able to compensate for the unpredictable fluidity of network traffic. It is an difficult task to buffer the right amount of packages to keep transmission flow consistent over time.
-As the number of packets being transmitted grows, the \textit{throughput} of the network node increases until packets are being transmitted at bottleneck rate. After this, the transmission rate cannot increase anymore, which leads to packets being buffered along their path to prevent them being lost [Figure \ref{fig:throughput-delay-relationship}]\cite{gettys2012bufferbloat}. If the incoming amount of traffic keeps to exceed the amount of outgoing traffic, those buffers will fill up (\textit{over-buffering}), which will eventually lead to \textit{bufferbloat} \cite{Allman13commentson,6886125}.
+As the number of packets being transmitted grows, the \textit{throughput} of the network node increases until packets are being transmitted at bottleneck rate. After this, the transmission rate cannot increase anymore, which leads to packets being buffered along their path to prevent them being lost \cite{gettys2012bufferbloat}. If the incoming amount of traffic keeps to exceed the amount of outgoing traffic, those buffers will fill up (\textit{over-buffering}), which will eventually lead to \textit{bufferbloat} \cite{Allman13commentson,6886125}.
 
 \subsection*{Bufferbloat}
 Bufferbloat refers to frequently full and excessively large buffers in internet nodes. This leads to partly unnecessary network delay and damages congestion avoidance algorithms, such as classic TCP \cite{gettys2012bufferbloat,chen2014bufferbloat}. Buffering is needed to provide space to queued packets waiting for transmission resulting in a minimization of packet loss. In the past however, buffer sizes were smaller than today's thus less packets could be queued and more were dropped, signaling transmission protocols the presence of congestion in this node, so those protocols can adjust. With memory getting cheaper over the years, buffers saw an increase in size. This has the negative impact, that more packets can be queued before any are dropped, thus those adjustments of congestion avoidance protocols kick in later than usual. Thus, buffers are being filled in the whole network which results in an extreme increase in network delay (\textit{latency}) and fluctuation (\textit{jitter}) \cite{gettys2012bufferbloat,staff2012bufferbloat,chen2014bufferbloat}.
@@ -145,18 +144,20 @@ As already mentioned, congestion detection algorithms make up an important part 
 TCP uses a handshake system. Whenever a client sends a data packet to the server, the server waits until it has received enough data (specified by the window size), and then sends back an acknowledgment package, signaling the successful transmission of data. There are also other handshake operations used, for example for establishing or terminating a connection, however those have no further importance to the congestion avoidance protocol \cite{1209197,jacobson1992tcp,huston2000tcp,jacobson1995congestion}.
 
 \subsection{Perceiving Congestion}
-Both partners of a connection are either a sender or a receiver. The sender keeps track of the time it takes from when a package sent until the acknowledgment is received. This is also known as \textit{round-trip time} (RTT), where a large RTT can indicate some congestion along the path. Some variances of TCP make use of this feature in their congestion avoidance algorithms, yet classic TCP does not \cite{huston2000tcp,jacobson1995congestion}. RTT also plays an very important role in the detection of packet loss, which further imply congestion. The sender side keeps track of the RTT while it is being measured and compares it to the \textit{retransmission timeout} (RTO) \cite{jacobson1992tcp}. RTO time is being calculated by estimating the mean and variance of the RTT. Whenever 	packets are not acknowledged within this RTO intervall, the package is being detected as lost and will be retransmitted. Therefore, it is essential to TCP performance, that the RTO is being determined accurately, as a too low RTO could prompt unnecessary retransmissions and too high RTO could slow down the application TCP is serving \cite{huston2000tcp,jacobson1995congestion}.\\
+\label{P_C_marker}
+Both partners of a connection are either a sender or a receiver. The sender keeps track of the time it takes from when a package sent until the acknowledgment is received. This is also known as \textit{round-trip time} (RTT), where a large RTT can indicate some congestion along the path. Some variances of TCP make use of this feature in their congestion avoidance algorithms, yet classic TCP does not \cite{huston2000tcp,jacobson1995congestion}. RTT also plays an very important role in the detection of packet loss, which further imply congestion. The sender side keeps track of the RTT while it is being measured and compares it to the \textit{retransmission timeout} (RTO) \cite{jacobson1992tcp}. RTO time is being calculated by estimating the mean and variance of the RTT. Whenever packets are not acknowledged within this RTO intervall, the package is being perceived as lost and will be retransmitted. Therefore, it is essential to TCP performance, that the RTO is being determined accurately, as a too low RTO could prompt unnecessary retransmissions and too high RTO could slow down the application TCP is serving \cite{huston2000tcp,jacobson1995congestion}. To implicitly notify TCP that congestion occurs, congested network nodes will occasionally drop packets after a certain threshold of queued packets has been exceeded. Usually, this is quite smaller the maximum queue length, therefore avoiding actions can be taken in time \cite{ramakrishnan1999proposal}.\\
 Note however, a high RTT can also have other causes than packet loss or congestion. A short term drastic decrease in the receivers processing performance can lead to packets being buffered at the receivers end for a prolonged period of time, thus resulting in a higher RTT \cite{huston2000tcp}.
 
 \subsection{Adjusting for Congestion}
-To prevent congestion altogether, packet flow inside a network would have to be conservative, i.e. a new packet isn't being sent into the network before an old packet leaves the network. A connection in this state is also being described as being \textit{in equilibrium} \cite{jacobson1992tcp}. Whenever a connection is in equilibrium, congestion in the network cannot be caused by this TCP connection, thus also controlling congestion. TCPs congestion avoidance algorithm can be categorized into three sub-algorithms, that all have the goal to keep the connection in equilibrium, no matter how congestion was perceived. Here, a variable called \textit{congestion window} (cwnd) has an important role. It describes the maximum amount of packages send during a interval. An additional mechanism of keeping a connection in equilibrium is, that each acknowledgement package received by the sender opens the space for a new package to be sent into the network \cite{jacobson1992tcp}.
+\label{AfC}
+To prevent congestion altogether, packet flow inside a network would have to be conservative, i.e. a new packet isn't being sent into the network before an old packet leaves the network. A connection in this state is also being described as being \textit{in equilibrium} \cite{jacobson1992tcp}. Whenever a connection is in equilibrium, congestion in the network cannot be caused by this TCP connection, thus also controlling congestion. TCPs congestion avoidance algorithm can be categorized into three sub-algorithms, that all have the goal to keep the connection in equilibrium, no matter how congestion was perceived. Here, a variable called \textit{congestion window} (cwnd) has an important role. It describes the maximum amount of packages send during a interval. An additional mechanism of keeping a connection in equilibrium is, that each acknowledgement package received by the sender opens the space for a new package to be sent into the network \cite{jacobson1992tcp}. The principles TCP uses to adjust for congestion are based on \textit{Additive-Increase Multiplicative-Decrease} (AIMD) principle.
 
 \subsubsection*{Slow-Start}
-The \textit{slow-start} algorithm is used when a connection has just been established or when multiple packet losses were detected. The cwnd variable is set to one package per estimated RTT, because no information about network congestion has been collected yet. Whenever an acknowledgment package is being received, cwnd will increase by one package. This exponential growth in packages helps to get the packet send rate to the maximum the network can handle quite quickly, resulting in almost immediately maximum network performance \cite{jacobson1992tcp}. Slow-start will only increase if cwnd
+The \textit{slow-start} algorithm is used when a connection has just been established or when multiple packet losses were detected. The cwnd variable is set to one package per estimated RTT, because no information about network congestion has been collected yet. Whenever an acknowledgment package is being received, cwnd will increase by one package. This exponential growth in packages helps to get the packet send rate to the maximum the network can handle quite quickly, resulting in almost immediately maximum network performance \cite{jacobson1992tcp}.
 
 \subsubsection*{Adaption}
-When the network is congested, buffers in network nodes will fill up exponentially \cite{jacobson1992tcp}. Therefore, the network can only stabilize if the amount of packets sent decreases at least as quickly as the queues are growing. The formula \cite{jacobson1992tcp} \[cwnd_{i+1}=d*cwnd_{i}, 0<d<1\] has an exponential decrease over time, thus resulting in the network recovering.\\
-If the network isn't congested, the sender should try to raise cwnd slowly to reach the networks maximum throughput again. A multiplicative, exponential increase over time, like the slow-start algorithm isn't the best choice here. Increasing the amounts of packets sent drastically while cwnd still is high can result in the network being challenge the networks capacity, resulting in heavy congestion. Therefore, the best option to raise cwnd to its limits is an additive increase \cite{jacobson1992tcp}:\[cwnd_{i+1}=cwnd_{i} + u\] Van Jacobson proposes in his 1992 paper about TCP congestion avoidance that $d$ will be set to $\frac{1}{2}$ and $u$ will be set to $\frac{1}{cwnd_{i}}$. Thus, cwnd can only increase by a maximum of one packet per RTT leading to a smooth approach to the networks limit \cite{jacobson1992tcp}.
+When the network is congested, buffers in network nodes will fill up exponentially \cite{jacobson1992tcp}. Therefore, the network can only stabilize if the amount of packets sent decreases at least as quickly as the queues are growing. The formula \cite{jacobson1992tcp} \[cwnd_{i+1} \leftarrow d*cwnd_{i}, 0<d<1\] has an exponential decrease over time, thus resulting in the network recovering.\\
+If the network isn't congested, the sender should try to raise cwnd slowly to reach the networks maximum throughput again. A multiplicative, exponential increase over time, like the slow-start algorithm isn't the best choice here. Increasing the amounts of packets sent drastically while cwnd still is high can result in the network being challenge the networks capacity, resulting in heavy congestion. Therefore, the best option to raise cwnd to its limits is an additive increase \cite{jacobson1992tcp}:\[cwnd_{i+1} \leftarrow cwnd_{i} + u\] Van Jacobson proposes in his 1992 paper about TCP congestion avoidance that $d$ will be set to $\frac{1}{2}$ and $u$ will be set to $\frac{1}{cwnd_{i}}$. Thus, cwnd can only increase by a maximum of one packet per RTT leading to a smooth approach to the networks limit \cite{jacobson1992tcp}.
 
 \begin{figure}
   \centering
@@ -186,14 +187,74 @@ If the network isn't congested, the sender should try to raise cwnd slowly to re
 \end{figure}
 
 
+\begin{figure*}[tb]
+	\centering
+		\begin{tikzpicture}[->, >=latex, node distance = 2.5cm, semithick]
+			%network
+			\node[client] (H1) {};
+			\node[router] (R1) [right=of H1] {};
+			\node[router] (R2) [right=of R1] {};
+			\node[router] (R3) [right=of R2] {};
+			\node[client] (H2) [right=of R3] {};
+			\path [line] (H1) -- (R1);
+			\path [line] (R1) -- (R2);
+			\path [line] (R2) -- (R3);
+			\path [line] (R3) -- (H2);
+			\path [line, dotted] (H2) -- ++(0,-35pt) -| (H1);
+			\node[below=0.8cm of R2] (text) [transition] {Congested Signal};
+			
+			%packets
+			\node[messageclosed,scale=0.8, fill=black!10] (P1) [above right=0.2cm and 1cm of H1] {};
+			\node[messageclosed,scale=0.8, fill=black!50] (P2) [above left=0.7cm and 0.3cm of R2] {};
+			\node[messageclosed,scale=0.8, fill=black!10] (P3) [above left=0.4cm and 0.2cm of R2] {};
+			\node[messageclosed,scale=0.8, fill=black!10] (P4) [above left=0.1cm and 0.1cm of R2] {};
+			\node[messageclosed,scale=0.8, fill=black!50] (P5) [above right=0.2cm and 1cm of R3] {};
+			\node[above=1.5cm of R1] (P) [transition] {Packet};
+			\node[above right = 1.5cm and 0.7cm of R2] (CN) [transition] {Congested Node};
+			\node[above=1.5 of H2] (MP) [transition] {Marked Packet};
+			\path [line] (P) -- (P1);
+			\path [line] (CN) -- (R2);
+			\path [line] (MP) -- (P5);
+		\end{tikzpicture}
+	\caption{TCP/IP with Explicit Congestion Notification}
+	\label{fig:ecn}
+\end{figure*}
 
 \section{Network Assisted Congestion Control}
-Congestion Control anhand von ECN (TCPIP-Erweiterung) erklaeren
-Bit im IP Header setzen + wie TCP damit umgeht
-Vorteile (genaue Maßnahmen) und Nachteile (erforderliche Hardware)
-XCP (Verallgemeinerung von ECN)
-\subsection*{DCTCP}
-DCTCP + Warum nur in Data Center verwendet
+The problem that comes with classic TCP is that the congestion detection algorithms are very implicit. As already mentioned, packet loss for example may have different causes other than network congestion, however, the congestion avoidance algorithm will still interpret it as congestion, thus possibly resulting in unnecessary network delay. Therefore, exactly determining whether the network is congested or not is crucial to keep a network stable. Here, the network layer comes into play. Because most communication should be hidden along the packets path, all network nodes will only communicate on the internet layer (where IP lives), but not above (where TCP lives) \cite{ramakrishnan1999proposal}.\\
+In 2001 a new method was standardized to explicitly notify TCP on congestion. \textit{Explicit Congestion Notification} (ECN) is an extension to TCP and IP, allowing end-to-end congestion notification, while also minimizing the amount of packets dropped. This is done by modifying the IP header to be able to carry one more bit - the \textit{Congestion Experienced} flag (CE) \cite{ramakrishnan1999proposal}. Instead of dropping packets occasionally after the amount of queued packets exceed a threshold [\nameref{P_C_marker}], all packets supporting ECN will now be marked (setting the CE bit in the IP header). Thus, congestion can be described explicitly resulting in better short- and long-term network performance. Also, if a data packet has been market, the according acknowledgment package will also be marked \cite{ramakrishnan1999proposal,ramakrishnan2001addition,10.1145/205511.205512}.\\
+To sum up so far, without ECN, classic TCP would just drive the network into congestion, and then recover from it. The network generally speaking will at least experience some jitter (fluctuating network delay). With ECN however, packets in congested nodes will be marked, explicitly informing the TCP sender that the network is congested. As a result, avoiding actions can be taken immediately. Therefore, we also speak of \textit{Congestion Control} \cite{ramakrishnan1999proposal,ramakrishnan2001addition}.
+
+\subsection{XCP}
+Although TCP is a very dominant protocol in the internet, there are also other transport protocols which could benefit from end-to-end congestion notification. The paper "Congestion Control for High Bandwidth-Delay Product Networks"  generalizes the ECN proposal of 2001, creating a new protocol called \textit{eXplicit Congestion Protocol} (XCP), while also improving upon it further by introducing new packet control concepts \cite{katabi2002congestion,1498331}.
+
+\subsubsection*{XCP Header}
+Like TCP, XCP is a window-based congestion control protocol indented for best traffic. Underneath the hood however, they are very different. A major difference between both protocols is that XCP does not only inform the sender on congestion, but does also provide information about the degree of congestion. XCP can achieve this by including a \textit{congestion header} to each packet. While the sender maintains a \textit{cwnd} and \textit{RTT} variable, as with TCP, those are also being communicated to network nodes via the congestion header as \textit{H\_cwnd} and \textit{H\_rtt}. In addition, the congestion header includes one more field. This \textit{H\_feedback} field is also initialized by the sender, but is the only field which can be modified by nodes along the path \cite{katabi2002congestion,1498331}.
+
+\subsubsection*{XCP Sender}
+As with TCP, the XCP sender maintains a congestion window, \textit{cwnd}, and an estimate of the round trip time, \textit{RTT}. On packet departure, the \textit{H\_cwnd} and \textit{H\_rtt} fields will be initialized with \textit{cwnd} and \textit{RTT} accordingly. The initialization value of the \textit{H\_feedback} field represents a desired send rate $r$:
+\[H\_feedback \leftarrow \frac{r \cdot RTT - cwnd}{cwnd}\]
+This is an improvement to TCPs adjustment algorithms as the desired rate can be reached after one RTT.\\
+The other task an XCP sender has is to adjust the congestion window according to the networks feedback. When s is the packet size, the congestion window variable would be adjusted by following formula:
+\[cwnd \leftarrow \max(cwnd + H_feedback, s)\]
+In addition to responding to direct feedback, the XCP sender still needs to handle package loss, though this is very similar to what TCP does \cite{katabi2002congestion}.
+
+\subsubsection*{XCP Receiver}
+The XCP receiver functions exactly the same way like a TCP receiver would except for copying the (modified) congestion header from the data packet to its acknowledgment \cite{katabi2002congestion}.
+
+\subsubsection*{XCP Router}
+The main task of network nodes in XCP, or XCP routers, is to inform the XCP sender of the current state of congestion. This is done by computing feedback at every node. The objective of XCP is to prevent the queues building up to a point at which packets have to be dropped \cite{katabi2002congestion}.\\
+Feedback is computed by two controllers. The \textit{Efficiency Controller} (EC) tries to maximize link utilization while minimizing queue lengths and packet drop rates. When the XCP routers link is underused, a positive feedback should be sent. If the link is congested however, a negative feedback should be sent in order to keep queue lengths small resulting in no packet drops \cite{katabi2002congestion,1498331}.\\
+To achieve efficiency and equilibrium, this feedback will be allocated to single packets as \textit{H\_feedback}. However, the EC does not decide which packets should carry the feedback. Hence, the \textit{Fairness Controller} (FC) comes into play. As TCP, FC relies on the AIMD principle [\nameref{AfC}]. If the EC calculated a positive feedback, it will be split up between all packages equally. If the feedback is negative however, it will be divided between packets in proportion to their current send-rates, which are determined by \textit{H\_cwnd} and \textit{H\_rtt} \cite{katabi2002congestion,1498331}.\\
+Decoupling the feedback computation allows XCP to quickly acquire the maximum send rate and achieve equilibrium, all while the network allocates bandwidth to all XCP senders equally \cite{katabi2002congestion}.
+
+\subsection{Evaluation of Network Assisted Congestion Control}
+As you can see, including the network layer to detect can have great performance improvements. 'Understanding XCP: Equilibrium and Fairness' has shown through simulations that many network topologies could benefit from XCP as it clears queues in equilibrium, thus resulting in improved network performance under load \cite{1498331}. Another paper has shown that XCP outperforms ordinary TCP in nearly any environment related to average queue lengths, efficiency and throughput \cite{katabi2002congestion}.
+\\However, all those performance comes with a cost. Since network nodes have to actively detect congestion, ECN, XCP and other network assisted congestion control protocols rely on active queue management in those nodes. Although most hardware being produced today meet those requirements, a large part of internet hardware isn't capable of doing so. Because any of those nodes can be congested, it would be counterintuitive to run those protocols, as congestion might or might not be detected, thus resulting in performance loss.
+\\Nevertheless, whenever implementation of XCP, ECN or similar protocols is not a challenge, you can implement network assisted congestion control with ease and see great performance improvements. Especially smaller networks with high traffic could definitely benefit from those technologies.
+
+\subsection{DCTCP}
+A lot of internet services run in data centers with large amounts computers communicating with each other, resulting in a lots of traffic inside the data center. Optimizing those data centers networking capabilities can result in an increase of quality of services, which they are hosting. PAPER OF \textit{DCTCP} proposes a variation of TCP using ECN to create a data transportation protocol, which specially takes hardware purposed for use those environments into account.
 
 \section{Conclusion}
 
