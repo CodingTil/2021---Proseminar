@@ -1,0 +1,218 @@
+\documentclass[english,aspectratio=43,t]{beamer}
+% useful options:
+%   aspectratio=169
+
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage{listings}
+\usepackage[iso]{isodate}
+
+% select theme before using any of its features
+\usetheme{Comsys}
+
+
+\title[Cool]{The Origins of Congestion\\and Network assisted end-to-end\\Congestion Control}
+\author{Til Mohr}
+\authorextra{Advisor: Jan Rüth}
+\subtitle{Proseminar}
+\date{\today}
+%\location{Aachen}
+%\projectlogo[scale=0.5]{logos/rwth_comsys_cropped}
+%\logoextra{logos/rwth_comsys_cropped}
+
+%\titlegraphics{images/presentation}
+%\begin{titlepicture}
+%	\includegraphics[width=3cm]{images/presentation}
+%\end{titlepicture}
+
+
+\begin{document}
+
+
+\titleframe
+
+
+\begin{frame}
+	\frametitle{Outline}
+	\tableofcontents
+\end{frame}
+
+
+\section{First Topic}
+\label{sec:first_topic}
+\frame\sectionpage
+
+
+\begin{frame}{Blocks}
+	\begin{cols}{0.5,auto}
+		\begin{block}{Block with Title}
+			Content of block with title
+		\end{block}
+		\begin{whiteblock}{White Block}
+			Just a blue frame around the text
+		\end{whiteblock}
+		\begin{exampleblock}{This is an Example Block}
+			Example Block
+		\end{exampleblock}
+		\begin{alertblock}{This is an Alert Block}
+			Alert Block
+		\end{alertblock}
+	\col
+		\begin{block}{}
+			Content of block without title
+		\end{block}
+		\begin{whiteblock}{}
+			Without title
+		\end{whiteblock}
+		\begin{grayblock}{}
+			Grayed out block
+		\end{grayblock}
+		\begin{exampleblock}{}
+			Example Block without Title
+		\end{exampleblock}
+		\begin{redblock}{}
+			Red Block without Title
+		\end{redblock}
+	\end{cols}
+	\pushdown
+	\begin{alertblock}{}
+		\begin{center}Don't overload your slides, beware of the shadow!\end{center}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}{Itemize}
+	\begin{cols}{1,2*1}
+		\begin{itemize}
+		\item item
+		\item item
+		\item []
+		\item item
+			\begin{itemize}
+			\item subitem
+				\begin{itemize}
+				\item subsubitem
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
+	\col
+		\begin{enumerate}
+		\item Enumerated item
+		\item Enumerated item
+		\item[]
+		\item Enumerated item
+		\item Enumerated item
+		\end{enumerate}
+	\end{cols}
+
+	\vspace{1em}
+
+	\begin{cols}{auto}
+		\begin{block}{Block with Items}
+			\begin{itemize}
+			\item item
+				\begin{itemize}
+				\item subitem
+					\begin{itemize}
+					\item subsubitem
+					\end{itemize}
+				\end{itemize}
+			\end{itemize}
+		\end{block}
+		\begin{block}{}
+			\begin{enumerate}
+			\item item
+			\item item
+			\end{enumerate}
+		\end{block}
+	\col
+		\begin{exampleblock}{}
+			\begin{itemize}
+			\item item
+				\begin{itemize}
+				\item subitem
+					\begin{itemize}
+					\item subsubitem
+					\end{itemize}
+				\end{itemize}
+			\end{itemize}
+		\end{exampleblock}
+		\begin{alertblock}{}
+			\begin{itemize}
+			\item item
+				\begin{itemize}
+				\item subitem
+					\begin{itemize}
+					\item subsubitem
+					\end{itemize}
+				\end{itemize}
+			\end{itemize}
+		\end{alertblock}
+	\col
+		\begin{whiteblock}{}
+			\begin{itemize}
+			\item item
+				\begin{itemize}
+				\item subitem
+					\begin{itemize}
+					\item subsubitem
+					\end{itemize}
+				\end{itemize}
+			\end{itemize}
+		\end{whiteblock}
+		\begin{grayblock}{}
+			\begin{itemize}
+			\item item
+				\begin{itemize}
+				\item subitem
+					\begin{itemize}
+					\item subsubitem
+					\end{itemize}
+				\end{itemize}
+			\end{itemize}
+		\end{grayblock}
+	\end{cols}
+\end{frame}
+
+\begin{frame}{Illustrative Pictures right of Main Text}
+	\begin{itemize}
+	\item A picture can be inserted which is right aligned
+		\begin{itemize}
+		\item It is vertically aligned with the position\ilgraphics[height=2em]{logos/rwth}
+		\\it was inserted in the source
+		\end{itemize}
+	\item There are two variants
+		\begin{itemize}
+		\item A variant based on \textit{{\textbackslash}includegraphics} which takes the same arguments as \textit{{\textbackslash}includegraphics}
+		\item An environment for any content
+		\begin{illustration}
+			\begin{tikzpicture}
+				\draw[draw=red] (0,0) circle (1em);
+				\draw[draw=blue] (0,0) rectangle(2em,2em);
+			\end{tikzpicture}
+		\end{illustration}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\singlemessageframe{This Frame contains\\only a single Message!}
+
+\begin{frame}{Sizes}%
+	\showsizes[cm]%
+	\showfonts
+\end{frame}
+
+
+\end{document}

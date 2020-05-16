@@ -133,23 +133,6 @@ numpages = {16}
 }
 
 @INPROCEEDINGS{1498331,  author={S. H. {Low} and L. L. H. {Andrew} and B. P. {Wydrowski}},  booktitle={Proceedings IEEE 24th Annual Joint Conference of the IEEE Computer and Communications Societies.},  title={Understanding XCP: equilibrium and fairness},   year={2005},  volume={2},  number={},  pages={1025-1036 vol. 2},}
-
-@inproceedings{10.1145/1851182.1851192,
-author = {Alizadeh, Mohammad and Greenberg, Albert and Maltz, David A. and Padhye, Jitendra and Patel, Parveen and Prabhakar, Balaji and Sengupta, Sudipta and Sridharan, Murari},
-title = {Data Center TCP (DCTCP)},
-year = {2010},
-isbn = {9781450302012},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/1851182.1851192},
-doi = {10.1145/1851182.1851192},
-booktitle = {Proceedings of the ACM SIGCOMM 2010 Conference},
-pages = {63–74},
-numpages = {12},
-keywords = {TCP, data center network, ECN},
-location = {New Delhi, India},
-series = {SIGCOMM ’10}
-}
   
 @article{10.1145/1851275.1851192,
 author = {Alizadeh, Mohammad and Greenberg, Albert and Maltz, David A. and Padhye, Jitendra and Patel, Parveen and Prabhakar, Balaji and Sengupta, Sudipta and Sridharan, Murari},
@@ -168,5 +151,45 @@ month = aug,
 pages = {63–74},
 numpages = {12},
 keywords = {ECN, TCP, data center network}
+}
+  
+@inproceedings{10.1145/1592681.1592693,
+author = {Chen, Yanpei and Griffith, Rean and Liu, Junda and Katz, Randy H. and Joseph, Anthony D.},
+title = {Understanding TCP Incast Throughput Collapse in Datacenter Networks},
+year = {2009},
+isbn = {9781605584430},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1592681.1592693},
+doi = {10.1145/1592681.1592693},
+booktitle = {Proceedings of the 1st ACM Workshop on Research on Enterprise Networking},
+pages = {73–82},
+numpages = {10},
+keywords = {unix, TCP, throughput collapse, incast},
+location = {Barcelona, Spain},
+series = {WREN ’09}
+}
+
+@techreport{ietf-tcpm-rfc793bis-16,
+	number =	{draft-ietf-tcpm-rfc793bis-16},
+	type =		{Internet-Draft},
+	institution =	{Internet Engineering Task Force},
+	publisher =	{Internet Engineering Task Force},
+	note =		{Work in Progress},
+	url =		{https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-rfc793bis-16},
+        author =	{Wesley Eddy},
+	title =		{{Transmission Control Protocol Specification}},
+	pagetotal =	106,
+	year =		2020,
+	month =		mar,
+	day =		24,
+	abstract =	{This document specifies the Internet's Transmission Control Protocol (TCP). TCP is an important transport layer protocol in the Internet stack, and has continuously evolved over decades of use and growth of the Internet. Over this time, a number of changes have been made to TCP as it was specified in RFC 793, though these have only been documented in a piecemeal fashion. This document collects and brings those changes together with the protocol specification from RFC 793. This document obsoletes RFC 793, as well as 879, 2873, 6093, 6429, 6528, and 6691 that updated parts of RFC 793. It updates RFC 1122, and should be considered as a replacement for the portions of that document dealing with TCP requirements. It updates RFC 5961 due to a small clarification in reset handling while in the SYN-RECEIVED state. RFC EDITOR NOTE: If approved for publication as an RFC, this should be marked additionally as "STD: 7" and replace RFC 793 in that role.},
+}
+
+@article{postel1981transmission,
+  title={Transmission control protocol},
+  author={Postel, Jon and others},
+  year={1981},
+  publisher={STD 7, RFC 793, September}
 }
   

@@ -62,9 +62,20 @@ Z.~{Fu}, P.~{Zerfos}, H.~{Luo}, S.~{Lu}, L.~{Zhang}, and M.~{Gerla}, ``The
 V.~Jacobson, R.~Braden, and D.~Borman, ``Tcp extensions for high performance,''
   RFc 1323, May, Tech. Rep., 1992.
 
+\bibitem{ietf-tcpm-rfc793bis-16}
+\BIBentryALTinterwordspacing
+W.~Eddy, ``{Transmission Control Protocol Specification},'' Internet
+  Engineering Task Force, Internet-Draft draft-ietf-tcpm-rfc793bis-16, Mar.
+  2020, work in Progress. [Online]. Available:
+  \url{https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-rfc793bis-16}
+\BIBentrySTDinterwordspacing
+
 \bibitem{huston2000tcp}
 G.~Huston, ``Tcp performance,'' \emph{The Internet Protocol Journal}, vol.~3,
   no.~2, pp. 2--24, 2000.
+
+\bibitem{postel1981transmission}
+J.~Postel \emph{et~al.}, ``Transmission control protocol,'' 1981.
 
 \bibitem{jacobson1995congestion}
 V.~Jacobson, ``Congestion avoidance and control,'' \emph{ACM SIGCOMM Computer
@@ -103,6 +114,16 @@ M.~Alizadeh, A.~Greenberg, D.~A. Maltz, J.~Padhye, P.~Patel, B.~Prabhakar,
   S.~Sengupta, and M.~Sridharan, ``Data center tcp (dctcp),'' \emph{SIGCOMM
   Comput. Commun. Rev.}, vol.~40, no.~4, p. 63–74, Aug. 2010. [Online].
   Available: \url{https://doi.org/10.1145/1851275.1851192}
+\BIBentrySTDinterwordspacing
+
+\bibitem{10.1145/1592681.1592693}
+\BIBentryALTinterwordspacing
+Y.~Chen, R.~Griffith, J.~Liu, R.~H. Katz, and A.~D. Joseph, ``Understanding tcp
+  incast throughput collapse in datacenter networks,'' in \emph{Proceedings of
+  the 1st ACM Workshop on Research on Enterprise Networking}, ser. WREN
+  ’09.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: Association
+  for Computing Machinery, 2009, p. 73–82. [Online]. Available:
+  \url{https://doi.org/10.1145/1592681.1592693}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
