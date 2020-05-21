@@ -22,45 +22,45 @@
 \BIBdecl
 
 \bibitem{appenzeller2004sizing}
-G.~Appenzeller, I.~Keslassy, and N.~McKeown, ``Sizing router buffers,''
+G.~Appenzeller, I.~Keslassy, and N.~McKeown, ``{Sizing router buffers},''
   \emph{ACM SIGCOMM Computer Communication Review}, vol.~34, no.~4, pp.
   281--292, 2004.
 
 \bibitem{gettys2012bufferbloat}
-J.~Gettys and K.~Nichols, ``Bufferbloat: dark buffers in the internet,''
+J.~Gettys and K.~Nichols, ``{Bufferbloat: dark buffers in the internet},''
   \emph{Communications of the ACM}, vol.~55, no.~1, pp. 57--65, 2012.
 
 \bibitem{staff2012bufferbloat}
-C.~Staff, ``Bufferbloat: What's wrong with the internet?'' \emph{Communications
-  of the ACM}, vol.~55, no.~2, pp. 40--47, 2012.
+C.~Staff, ``{Bufferbloat: What's wrong with the internet?}''
+  \emph{Communications of the ACM}, vol.~55, no.~2, pp. 40--47, 2012.
 
 \bibitem{villamizar1994high}
-C.~Villamizar and C.~Song, ``High performance tcp in ansnet,'' \emph{ACM
+C.~Villamizar and C.~Song, ``{High performance TCP in ANSNET},'' \emph{ACM
   SIGCOMM Computer Communication Review}, vol.~24, no.~5, pp. 45--60, 1994.
 
 \bibitem{Allman13commentson}
-M.~Allman, ``Comments on bufferbloat,'' \emph{Computer Communication Review},
+M.~Allman, ``{Comments on Bufferbloat},'' \emph{Computer Communication Review},
   pp. 31--37, 2013.
 
 \bibitem{6886125}
-V.~G. {Cerf}, ``Bufferbloat and other internet challenges,'' \emph{IEEE
+V.~G. {Cerf}, ``{Bufferbloat and Other Internet Challenges},'' \emph{IEEE
   Internet Computing}, vol.~18, no.~5, pp. 80--80, 2014.
 
 \bibitem{chen2014bufferbloat}
-Y.-C. Chen and D.~Towsley, ``On bufferbloat and delay analysis of multipath tcp
-  in wireless networks,'' in \emph{2014 IFIP Networking Conference}.\hskip 1em
-  plus 0.5em minus 0.4em\relax IEEE, 2014, pp. 1--9.
+Y.-C. Chen and D.~Towsley, ``{On bufferbloat and delay analysis of multipath
+  TCP in wireless networks},'' in \emph{2014 IFIP Networking Conference}.\hskip
+  1em plus 0.5em minus 0.4em\relax IEEE, 2014, pp. 1--9.
 
 \bibitem{1209197}
-Z.~{Fu}, P.~{Zerfos}, H.~{Luo}, S.~{Lu}, L.~{Zhang}, and M.~{Gerla}, ``The
-  impact of multihop wireless channel on tcp throughput and loss,'' in
+Z.~{Fu}, P.~{Zerfos}, H.~{Luo}, S.~{Lu}, L.~{Zhang}, and M.~{Gerla}, ``{The
+  impact of multihop wireless channel on TCP throughput and loss},'' in
   \emph{IEEE INFOCOM 2003. Twenty-second Annual Joint Conference of the IEEE
   Computer and Communications Societies (IEEE Cat. No.03CH37428)}, vol.~3,
   2003, pp. 1744--1753 vol.3.
 
 \bibitem{jacobson1992tcp}
-V.~Jacobson, R.~Braden, and D.~Borman, ``Tcp extensions for high performance,''
-  RFc 1323, May, Tech. Rep., 1992.
+V.~Jacobson, R.~Braden, and D.~Borman, ``{TCP extensions for high
+  performance},'' RFc 1323, May, Tech. Rep., 1992.
 
 \bibitem{ietf-tcpm-rfc793bis-16}
 \BIBentryALTinterwordspacing
@@ -71,59 +71,59 @@ W.~Eddy, ``{Transmission Control Protocol Specification},'' Internet
 \BIBentrySTDinterwordspacing
 
 \bibitem{huston2000tcp}
-G.~Huston, ``Tcp performance,'' \emph{The Internet Protocol Journal}, vol.~3,
+G.~Huston, ``{Tcp performance},'' \emph{The Internet Protocol Journal}, vol.~3,
   no.~2, pp. 2--24, 2000.
 
 \bibitem{postel1981transmission}
-J.~Postel \emph{et~al.}, ``Transmission control protocol,'' 1981.
+J.~Postel \emph{et~al.}, ``{Transmission control protocol},'' 1981.
 
 \bibitem{jacobson1995congestion}
-V.~Jacobson, ``Congestion avoidance and control,'' \emph{ACM SIGCOMM Computer
+V.~Jacobson, ``{Congestion avoidance and control},'' \emph{ACM SIGCOMM Computer
   Communication Review}, vol.~25, no.~1, pp. 157--187, 1995.
 
 \bibitem{ramakrishnan1999proposal}
-K.~Ramakrishnan and S.~Floyd, ``A proposal to add explicit congestion
-  notification (ecn) to ip,'' RFC 2481, January, Tech. Rep., 1999.
+K.~Ramakrishnan and S.~Floyd, ``{A proposal to add explicit congestion
+  notification (ECN) to IP},'' RFC 2481, January, Tech. Rep., 1999.
 
 \bibitem{ramakrishnan2001addition}
-K.~Ramakrishnan, S.~Floyd, D.~Black \emph{et~al.}, ``The addition of explicit
-  congestion notification (ecn) to ip,'' 2001.
+K.~Ramakrishnan, S.~Floyd, D.~Black \emph{et~al.}, ``{The addition of explicit
+  congestion notification (ECN) to IP},'' 2001.
 
 \bibitem{10.1145/205511.205512}
 \BIBentryALTinterwordspacing
-S.~Floyd, ``Tcp and explicit congestion notification,'' \emph{SIGCOMM Comput.
+S.~Floyd, ``{TCP and Explicit Congestion Notification},'' \emph{SIGCOMM Comput.
   Commun. Rev.}, vol.~24, no.~5, p. 8–23, Oct. 1994. [Online]. Available:
   \url{https://doi.org/10.1145/205511.205512}
 \BIBentrySTDinterwordspacing
 
 \bibitem{katabi2002congestion}
-D.~Katabi, M.~Handley, and C.~Rohrs, ``Congestion control for high
-  bandwidth-delay product networks,'' in \emph{Proceedings of the 2002
+D.~Katabi, M.~Handley, and C.~Rohrs, ``{Congestion control for high
+  bandwidth-delay product networks},'' in \emph{Proceedings of the 2002
   conference on Applications, technologies, architectures, and protocols for
   computer communications}, 2002, pp. 89--102.
 
 \bibitem{1498331}
-S.~H. {Low}, L.~L.~H. {Andrew}, and B.~P. {Wydrowski}, ``Understanding xcp:
-  equilibrium and fairness,'' in \emph{Proceedings IEEE 24th Annual Joint
+S.~H. {Low}, L.~L.~H. {Andrew}, and B.~P. {Wydrowski}, ``{Understanding XCP:
+  equilibrium and fairness},'' in \emph{Proceedings IEEE 24th Annual Joint
   Conference of the IEEE Computer and Communications Societies.}, vol.~2, 2005,
   pp. 1025--1036 vol. 2.
 
 \bibitem{10.1145/1851275.1851192}
 \BIBentryALTinterwordspacing
 M.~Alizadeh, A.~Greenberg, D.~A. Maltz, J.~Padhye, P.~Patel, B.~Prabhakar,
-  S.~Sengupta, and M.~Sridharan, ``Data center tcp (dctcp),'' \emph{SIGCOMM
+  S.~Sengupta, and M.~Sridharan, ``{Data Center TCP (DCTCP)},'' \emph{SIGCOMM
   Comput. Commun. Rev.}, vol.~40, no.~4, p. 63–74, Aug. 2010. [Online].
   Available: \url{https://doi.org/10.1145/1851275.1851192}
 \BIBentrySTDinterwordspacing
 
 \bibitem{10.1145/1592681.1592693}
 \BIBentryALTinterwordspacing
-Y.~Chen, R.~Griffith, J.~Liu, R.~H. Katz, and A.~D. Joseph, ``Understanding tcp
-  incast throughput collapse in datacenter networks,'' in \emph{Proceedings of
-  the 1st ACM Workshop on Research on Enterprise Networking}, ser. WREN
-  ’09.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: Association
-  for Computing Machinery, 2009, p. 73–82. [Online]. Available:
-  \url{https://doi.org/10.1145/1592681.1592693}
+Y.~Chen, R.~Griffith, J.~Liu, R.~H. Katz, and A.~D. Joseph, ``{Understanding
+  TCP Incast Throughput Collapse in Datacenter Networks},'' in
+  \emph{Proceedings of the 1st ACM Workshop on Research on Enterprise
+  Networking}, ser. WREN ’09.\hskip 1em plus 0.5em minus 0.4em\relax New
+  York, NY, USA: Association for Computing Machinery, 2009, p. 73–82.
+  [Online]. Available: \url{https://doi.org/10.1145/1592681.1592693}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
