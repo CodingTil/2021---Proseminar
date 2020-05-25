@@ -70,12 +70,12 @@ W.~Eddy, ``{Transmission Control Protocol Specification},'' Internet
   \url{https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-rfc793bis-16}
 \BIBentrySTDinterwordspacing
 
+\bibitem{postel1981transmission}
+J.~Postel \emph{et~al.}, ``{Transmission control protocol},'' 1981.
+
 \bibitem{huston2000tcp}
 G.~Huston, ``{Tcp performance},'' \emph{The Internet Protocol Journal}, vol.~3,
   no.~2, pp. 2--24, 2000.
-
-\bibitem{postel1981transmission}
-J.~Postel \emph{et~al.}, ``{Transmission control protocol},'' 1981.
 
 \bibitem{jacobson1995congestion}
 V.~Jacobson, ``{Congestion avoidance and control},'' \emph{ACM SIGCOMM Computer
