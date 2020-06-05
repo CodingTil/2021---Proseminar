@@ -1,0 +1,101 @@
+Review Form
+
+Please keep in mind that the review is meant to support the author with constructive and useful information that helps him/her to improve the quality of the paper. After reading your review, the author should know about the weaknesses of his/her paper and the author should also know how to fix these.
+Reviewing a paper requires careful preparation and reading. You might encounter parts of the paper that require to read additional literature (referenced in the paper) in order to understand them. Please have a look at this additional literature whenever necessary.
+-------------------------------------------
+
+Title of the paper:
+Vulnerabilities and Possible Defenses of the Domain Name System
+
+---------
+Reviewer
+---------
+
+Knowledge (Your knowledge about the topic):
+(X) No previous knowledge
+( ) Little knowledge
+( ) Skilled
+( ) Expert
+
+------------
+Review
+------------
+
+Paper summary: Give a short summary of the contents of the paper and discuss the scientific aspects of the paper. [3-5 Sentences]
+Das paper stellt die Funktionsweise eines der wichtigsten Komponenten des Internets vor, dem DNS, und erklärt welche Gefahren hier auftreten, die die Privatssphäre und Sicherheit von Usern beeinschränken können. Diesbezüglich werden Lösungsansätze vorgestellt, die versuchen, diese Attacken zu unterbinden, und wie erfolgreich sie dabei sind. Zum Schluss werden verschiedene Implementierungsansätze zu einem bestimmten Lösungsansatz evaluiert.  
+
+Paper strengths: What are the strengths of the paper. Mainly consider the content and the scientific quality of the paper. [3-5 Sentences]
+Das paper schafft es gut die möglichen Attacken vorzustellen, bezüglich wie sie funktionieren und auf was sie abzielen. Gut gelungen ist zudem, dass ab und zu parallelen in die reale Welt gezogen werden, wo diese Probleme bereits auftreten (China). Die Herangehensweise zum Verhindern dieser Attacken ist auch ausführlich dargestellt.
+
+Paper weaknesses: What are the weaknesses of the paper. Mainly consider the content, structure, and the scientific quality of the paper. [3-5 Sentences]
+Jedes Kapitel ist ein reiner Text, es sind keine wirklichen Absätze oder Subsections zu finden wodurch das Lesen erschwert wird. Hierdurch wird nicht klar, in weche Richtung das paper geht, es ist also nicht immer ein Goldener Faden zu finden. Dies wird auch nicht verbessert, dass keinen Referenzen auf andere Kapitel zu finden sind. An manchen Stellen ist der Übergang im eigenen Kapitel selbst ein bisschen abrupt. Zudem scheint mir Figure 5 um die vollen 5 Seiten zu erreichen, da es fast nichts mit dem Inhalt zu tun hat.
+
+Presentation of the paper: Quality and clarity of the presentation
+( ) Difficult to follow, badly written, and unorganized
+(X) Some difficulties regarding structure and clarity
+( ) Well structured and well written with minor difficulties
+( ) Well structured and easy to read. Good presentation.
+
+Comments about the presentation of the paper: [at least two sentences per question]
+
+1. Is the paper well organized?
+Ja. Inhaltlich ergibt es Sinn, erst DNS selber zu erklären, und dann die Gefahren mit verschiedenen Lösungsansätzen vorzustellen. Zum Schluss ist es immer gut einen Ausblick zu geben, was hier durch "Current Implementations and their Success" erfolgt.
+
+2. Is there a clear structure that helps the reader to easily understand the contents of the paper?
+Nein. Beim Lesen verliert man aber schnell mal den Faden, weil keine Pausen ermöglicht werden. Das Gliedern in Subsections und Hinzufügen von cross-referencing kann dies ernorm verbessern.
+
+3. Do parts of the paper require further explanation? Are some parts poorly written, blurry, or inaccurate? Are there any contradicting statements?
+Das Hinzufügen von Subsections könnte auch hier Vorteile bringen, dadurch dass man dem Leser Pausen zum Verarbeiten bereitstellt und alles klarer strukturiert. Bei "Current Implementations and their Success" erwartet man evtl. mehrere Implementierungen von verschiedenen Lösungen, da waren wir ein wenig überrascht, dass es nur um eine Lösung ging.
+
+4. Is the paper complete? Does it contain all necessary parts (Abstract, introduction, main part, presentation of results / discussion, conclusion)? Do these parts serve their purpose?
+Der erste Satz des Abstracts überrempelt den Leser ein wenig, dadurch dass einem gleich 6 Attacks genannt werden (+ der Satz ist lange). Ansonsten ist sowohl Abstract als auch Introduction gut gelungen, wenn auch hier evtl. cross-referencing stattfinden könnte. Die Conclusion ist evtl. ein wenig lange (unnötige und doppelte Sachen streichen), aber sie erfüllt ihren Zweck gut.
+
+5. Is the text structured into paragraphs and sections? Does this structure aid the reader?
+Ich glaube das wurde bisher schon oft genug erwähnt: Erstelle Subsections und mache cross-referencing.
+
+6. Describe the quality of the language.
+Bis auf ein paar kleine Fehler war die Sprache gut. Man kann bei grammarly.com nochmal das paper kostenlos auf Sprache überprüfen, falls man es noch verbessern kann.
+
+7. Do the figures support the process of reading and understanding? Would further figures be useful/necessary?
+Figure 1 und Figure 2 finde ich wichtig. Da Figure 3 auf dieser Seite steht, und du Figure 1 schon auf der Seite vorher beginnst zu erklären, würde ich Figure 1 auf Seite 1 schieben.
+Zu Figure 2: Wieso zählen die Bits von 9 zu 0?
+Figure 4 ist gut gelungen und trägt dem Verständis bei.
+Figure 5 scheint mir fehl am Platz. Es wird nicht wirklich sinnvoll darauf verwiesen und scheint mir nur da zu sein, um auf 5 volle Seiten zu kommen.
+
+8. Describe the quality of the figures (Resolution, style, font size ...).
+Siehe Anmerkungen: Erstelle alle Figures selber. Dadurch habt ihr einheitliche Fonts überall.
+
+9. Is there a catchy/sensible caption for every figure? Are the figures mentioned in the text?
+Was mein Betreuer mir gesagt hat: Die Captions können gerne 2-5 Zeilen lang sein, in denen man diese genauer erklärt. Das hat den Vorteil, dass, falls die Figure kompliziert ist, der Leser direkt die Figure und die Erklärung lesen kann, und nicht die Erklärung irgendwo aus dem paper holen. Trägt also auch dem Verständis bei.
+Zudem: Beende die Captions mit einem '.', auch wenn es kein Satz ist.
+
+10. Suggestions for improving the quality of the presentation.
+Siehe Anmerkungen
+
+11. Are there references for all techniques, methods, protocols, etc. Is it clear where the statements/images/graphs have been taken from?
+Ja.
+
+12. Do the citations, references, and the references list comply with the usual standards?
+An manchen Stellen gibt es Inkonsistenzen (siehe Anmerkungen). Zudem habt ihr immer die references zu den figures als "figure x". Benutzt ihr auch '\label{fig:figure_x}' und '\nameref{fig:figure_x}' oder '\ref{figure:figure_x}'? Bei mir erzeugt dies andere Ausgaben.
+Die ersten Abschnitte von "II. Structure and Mechanisms of DNS" haben zwar keine Citation (von wo habt ihr den header her?), sonst scheint mir alles richtig.
+
+13. Is the paper correct? Are there any questionable or unjustifiably absolute statements?
+Nein, mir scheint alles so korrekt zu sein.
+
+Further comments to the author. Please give further information that can help the author to improve the paper.
+
+Beigefügt ist euer PDF mit Feedback.
+Schwarz: 	Struktur
+Rot: 		Inhalt
+Grün:		Sprache
+Blau:		Anmerkungen
+
+Mir ist aufgefallen, dass es teilweise formale Inkonsistenzen gibt.
+ -	Wenn ihr Fachbegriffe oder Variablen einführt, würde ich das erste Vorkommen folgend formatieren: "kursiv_Fachbegriff (Abkürzung)", wobei die Abkürzung natürlich obtional ist.
+	Falls es ein Fachbegriff ist, verwende danach nur die Abkürzung oder den Fachbegriff (auf eines einigen), für Variablen nur die kursive Schreibweise. Die ganzen Attacks die ihr vorstellt können sehen dadurch klarer strukuriert aus.
+ - 	Verwendet Subsections. Z.B. wenn ihr die Attacks vorstellt, könnt ihr jedem Attack eine Subsection geben. Das gibt dem Leser eine kleine Pause und mehr Verständis darüber, was ihr machen wollt. Ermöglicht auch cross-referencing.
+ -	Benutzt cross-referencing. Also wenn ihr in der Introduction auf die Implementations anspielt, könnt ihr eine Referenz auf das Kapitel 5 machen. Das gibt dem paper eine Goldenen Faden.
+ -	Wenn ihr nach einem Satz citations hinzufügen wollt, fügt die erst ein, dann den Punkt: "...text [cit1], [cit2].", nicht "...text. [cit1], [cit2]" (Kapitel 5)
+
+Desweiteren:
+ -	Erstellt die Grafiken selber. Mit dem tikz-package kann man die relativ einfach selber nachbaseteln (bitmap zB für DNS Message). Dadurch sind Schriftgröße und Schriftart überall einheitlich.

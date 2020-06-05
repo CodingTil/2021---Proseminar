@@ -1,0 +1,95 @@
+Review Form
+
+Please keep in mind that the review is meant to support the author with constructive and useful information that helps him/her to improve the quality of the paper. After reading your review, the author should know about the weaknesses of his/her paper and the author should also know how to fix these.
+Reviewing a paper requires careful preparation and reading. You might encounter parts of the paper that require to read additional literature (referenced in the paper) in order to understand them. Please have a look at this additional literature whenever necessary.
+-------------------------------------------
+
+Title of the paper:
+Pacing TCP Traffic and its Implementation in Modern Congestion Control
+
+---------
+Reviewer
+---------
+
+Knowledge (Your knowledge about the topic):
+( ) No previous knowledge
+(X) Little knowledge
+( ) Skilled
+( ) Expert
+
+------------
+Review
+------------
+
+Paper summary: Give a short summary of the contents of the paper and discuss the scientific aspects of the paper. [3-5 Sentences]
+Zu Beginn stellt das paper die allgemeine Funktionsweise von TCP vor und untersucht hierauf genauer einen Ansatz, um Congestion zu minimieren, dem loss-based Congestion 'Control'. Da dieser im Bezug auf Buffer-Größen in bestimmten Bedingugen ein Netzwerk noch mehr in Congestion treiben kann, wird ein weiterer Ansatz vorgestellt, das pacing. Dazu wird ein bestimmter Algorithmus (BBR) nähergezogen, woraufhin beide Ansätze und BBR in verschiedenen Szenarien verglichen werden.
+
+Paper strengths: What are the strengths of the paper. Mainly consider the content and the scientific quality of the paper. [3-5 Sentences]
+Das paper startet stark. Es ist von Beginn an eine klare Struktur zu erkennen, auch später bekommen wichtige Themen ihre eigenen Abschnitte, was das Lesen deutlich erleichtert. Die Themen werden auch überschaulich übermittelt und teilweise auch mithilfe von Grafiken sinnvoll erklärt.
+
+Paper weaknesses: What are the weaknesses of the paper. Mainly consider the content, structure, and the scientific quality of the paper. [3-5 Sentences]
+Eine große Schwäche in dem paper sind Sprache und Formattierung. Ab Hälfte des papers ist es von Inkonsitenzen und unverständlichen Formulierungen übersäht. Auch wenn die Qualität des Inhalts nicht nachläst, wird das Lesen trotzdem erschwert. Auch Formattierung bezüglich Auflistungen und Grafiken können verbessert werden.
+
+Presentation of the paper: Quality and clarity of the presentation
+( ) Difficult to follow, badly written, and unorganized
+( ) Some difficulties regarding structure and clarity
+(X) Well structured and well written with minor difficulties
+( ) Well structured and easy to read. Good presentation.
+
+Comments about the presentation of the paper: [at least two sentences per question]
+
+1. Is the paper well organized?
+Ja, alle wichtigen Themen bekommen ihren eigenen Platz.
+
+2. Is there a clear structure that helps the reader to easily understand the contents of the paper?
+Ja, jedoch auch wenn vorhanden, könnte gerade in der Introduction mehr cross-referencing stattfinden. Damit führt man den Leser besser durch das paper.
+
+3. Do parts of the paper require further explanation? Are some parts poorly written, blurry, or inaccurate? Are there any contradicting statements?
+Kapitel IV fand ich etwas schwierig zu lesen, was aber auch an den Inkonsitenzen und der Sprache liegen kann. Es war mir nicht sofort bewusst, was genau wie verglichen wird. Dies könnte zu Beginn des Vergleiches evtl. ergänzt werden.
+
+4. Is the paper complete? Does it contain all necessary parts (Abstract, introduction, main part, presentation of results / discussion, conclusion)? Do these parts serve their purpose?
+Ja.
+
+5. Is the text structured into paragraphs and sections? Does this structure aid the reader?
+Ja. (Hab ich auch schon erwähnt)
+
+6. Describe the quality of the language.
+Zu Beginn relativ gut, nimmt aber deutlich ab. (siehe Anmerkungen unten)
+
+7. Do the figures support the process of reading and understanding? Would further figures be useful/necessary?
+Ja.
+
+8. Describe the quality of the figures (Resolution, style, font size ...).
+Unterschiedlich. Ich würde euch raten, die Figures selber zu erstellen - außer Figure 1 vllt., die ist echt gut so. Das geht zB mithilfe des 'tikz'-packages (Latex). Dadurch habt ihr überall einheitliche Fonts.
+
+9. Is there a catchy/sensible caption for every figure? Are the figures mentioned in the text?
+Ja, auch wenn sie möglicherweise etwas länger sein könnten (bis zu 5 Zeilen). Aber mithilfe des papers werden sie trotzdem gut genug erklärt.
+
+10. Suggestions for improving the quality of the presentation.
+Language überarbeiten (grammarly), Inkonsitenzen überarbeiten, Figures selber erstellen, womöglich Kapitel IV verbessern (siehe oben).
+
+11. Are there references for all techniques, methods, protocols, etc. Is it clear where the statements/images/graphs have been taken from?
+In gesamt Kapitel II A ist keine einzige citation vorhanden. Soll das so sein? Sonst ist alles clar referenziert.
+
+12. Do the citations, references, and the references list comply with the usual standards?
+Ja, außer dass ihr das paper "Sizing router buffers" doppelt drinnen habt.
+
+13. Is the paper correct? Are there any questionable or unjustifiably absolute statements?
+Nach meinem Verständis ist Congestion Avoidance, wenn hier TCP implizit über zB loss erfährt, dass das network congested ist. Sobald TCP explizit auf congestion hingewiesen wird (ECN), spricht man von Congestion Control.
+Sonst scheint mir alles korrekt zu sein.
+
+Further comments to the author. Please give further information that can help the author to improve the paper.
+
+Beigefügt ist euer PDF mit Feedback.
+Schwarz: 	Struktur
+Rot: 		Inhalt
+Grün:		Sprache
+Blau:		Anmerkungen
+
+Sprache und sonstige Inkonsitenzen:
+ -	Britisch English (BE) ist nicht American English (AE). Ihr spielt da immer hin und her.
+ -	"'" ist nicht "´". Das zweite ist falsch. Benutzt also "it's".
+ -	Citations bei Satzende bitte im Format: "...text [cit1], [cit2]. text...", wobei cit1<cit2.
+ -	Benutzt Latex Listen / Enumerations. zB Seite 4 rechte Spalte: Ohne Einrückungen sieht das furchtbar aus.
+ 
+Tipp: Lasst euer paper über grammarly.com laufen, dort wird nach Grammatik, BE/AE, und Ausdruck geprüft.
