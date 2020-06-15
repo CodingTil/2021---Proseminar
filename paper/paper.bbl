@@ -56,19 +56,15 @@ Z.~{Fu}, P.~{Zerfos}, H.~{Luo}, S.~{Lu}, L.~{Zhang}, and M.~{Gerla}, ``{The
   impact of multihop wireless channel on TCP throughput and loss},'' in
   \emph{IEEE INFOCOM 2003. Twenty-second Annual Joint Conference of the IEEE
   Computer and Communications Societies (IEEE Cat. No.03CH37428)}, vol.~3,
-  2003, pp. 1744--1753 vol.3.
+  2003, pp. 1744--1753.
 
 \bibitem{jacobson1992tcp}
 V.~Jacobson, R.~Braden, and D.~Borman, ``{TCP extensions for high
   performance},'' RFc 1323, May, Tech. Rep., 1992.
 
 \bibitem{ietf-tcpm-rfc793bis-16}
-\BIBentryALTinterwordspacing
-W.~Eddy, ``{Transmission Control Protocol Specification},'' Internet
-  Engineering Task Force, Internet-Draft draft-ietf-tcpm-rfc793bis-16, Mar.
-  2020, work in Progress. [Online]. Available:
-  \url{https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-rfc793bis-16}
-\BIBentrySTDinterwordspacing
+W.~Eddy, ``{Transmission Control Protocol Specification},'' Tech. Rep., 2020,
+  work in Progress.
 
 \bibitem{postel1981transmission}
 J.~Postel \emph{et~al.}, ``{Transmission control protocol},'' 1981.
@@ -90,11 +86,8 @@ K.~Ramakrishnan, S.~Floyd, D.~Black \emph{et~al.}, ``{The addition of explicit
   congestion notification (ECN) to IP},'' 2001.
 
 \bibitem{10.1145/205511.205512}
-\BIBentryALTinterwordspacing
 S.~Floyd, ``{TCP and Explicit Congestion Notification},'' \emph{SIGCOMM Comput.
-  Commun. Rev.}, vol.~24, no.~5, p. 8–23, Oct. 1994. [Online]. Available:
-  \url{https://doi.org/10.1145/205511.205512}
-\BIBentrySTDinterwordspacing
+  Commun. Rev.}, vol.~24, no.~5, p. 8–23, 1994.
 
 \bibitem{katabi2002congestion}
 D.~Katabi, M.~Handley, and C.~Rohrs, ``{Congestion control for high
@@ -106,24 +99,18 @@ D.~Katabi, M.~Handley, and C.~Rohrs, ``{Congestion control for high
 S.~H. {Low}, L.~L.~H. {Andrew}, and B.~P. {Wydrowski}, ``{Understanding XCP:
   equilibrium and fairness},'' in \emph{Proceedings IEEE 24th Annual Joint
   Conference of the IEEE Computer and Communications Societies.}, vol.~2, 2005,
-  pp. 1025--1036 vol. 2.
+  pp. 1025--1036.
 
 \bibitem{10.1145/1851275.1851192}
-\BIBentryALTinterwordspacing
 M.~Alizadeh, A.~Greenberg, D.~A. Maltz, J.~Padhye, P.~Patel, B.~Prabhakar,
   S.~Sengupta, and M.~Sridharan, ``{Data Center TCP (DCTCP)},'' \emph{SIGCOMM
-  Comput. Commun. Rev.}, vol.~40, no.~4, p. 63–74, Aug. 2010. [Online].
-  Available: \url{https://doi.org/10.1145/1851275.1851192}
-\BIBentrySTDinterwordspacing
+  Comput. Commun. Rev.}, vol.~40, no.~4, p. 63–74, 2010.
 
 \bibitem{10.1145/1592681.1592693}
-\BIBentryALTinterwordspacing
 Y.~Chen, R.~Griffith, J.~Liu, R.~H. Katz, and A.~D. Joseph, ``{Understanding
   TCP Incast Throughput Collapse in Datacenter Networks},'' in
   \emph{Proceedings of the 1st ACM Workshop on Research on Enterprise
-  Networking}, ser. WREN ’09.\hskip 1em plus 0.5em minus 0.4em\relax New
-  York, NY, USA: Association for Computing Machinery, 2009, p. 73–82.
-  [Online]. Available: \url{https://doi.org/10.1145/1592681.1592693}
-\BIBentrySTDinterwordspacing
+  Networking}.\hskip 1em plus 0.5em minus 0.4em\relax Association for Computing
+  Machinery, 2009, p. 73–82.
 
 \end{thebibliography}
