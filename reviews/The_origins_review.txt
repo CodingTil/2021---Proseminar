@@ -1,0 +1,65 @@
+Review Form
+
+Please keep in mind that the review is meant to support the author with constructive and useful information that helps him/her to improve the quality of the paper. After reading your review, the author should know about the weaknesses of his/her paper and the author should also know how to fix these.
+Reviewing a paper requires careful preparation and reading. You might encounter parts of the paper that require to read additional literature (referenced in the paper) in order to understand them. Please have a look at this additional literature whenever necessary.
+-------------------------------------------
+
+Title of the paper: The Origins of Congestion and Network Assisted End-to-End Congestion Control
+
+---------
+Reviewer
+---------
+
+Knowledge (Your knowledge about the topic):
+( ) No previous knowledge
+(x) Little knowledge
+( ) Skilled
+( ) Expert
+
+------------
+Review
+------------
+
+Paper summary: Give a short summary of the contents of the paper and discuss the scientific aspects of the paper. [3-5 Sentences]
+Tcp is outdated. It is hard to implement standardized protocolls in WAN but easy to implement in small networks. The buffer must be adjusted to the networks scale to reduce the Queing the delay which is the main reason for Congestions.
+Paper strengths: What are the strengths of the paper. Mainly consider the content and the scientific quality of the paper. [3-5 Sentences]
+Very well Structured and easy to understand while remaining very factual. And still explaining the mechanics behind the Algorithms. Good captions and headings.
+Paper weaknesses: What are the weaknesses of the paper. Mainly consider the content, structure, and the scientific quality of the paper. [3-5 Sentences]
+Bit short conclusion. Fig. 4 needs to be placed differntly and maybe a litlle smaller.
+Presentation of the paper: Quality and clarity of the presentation
+( ) Difficult to follow, badly written, and unorganized
+( ) Some difficulties regarding structure and clarity
+(X) Well structured and well written with minor difficulties
+( ) Well structured and easy to read. Good presentation.
+
+Comments about the presentation of the paper: [at least two sentences per question]
+
+1. Is the paper well organized?
+Perfectly struckered and organized.  The lists help the flow of the reader.
+2. Is there a clear structure that helps the reader to easily understand the contents of the paper?
+The order of the sections was right and building up on top of each other.
+3. Do parts of the paper require further explanation? Are some parts poorly written, blurry, or inaccurate? Are there any contradicting statements?
+No futher explanation needed. Very accurate representation of Algorithms. No contradicting statements.
+4. Is the paper complete? Does it contain all necessary parts (Abstract, introduction, main part, presentation of results / discussion, conclusion)? Do these parts serve their purpose?
+Every necessary part gives with a good structure. Every part served their porpuse. 
+5. Is the text structured into paragraphs and sections? Does this structure aid the reader?
+The text is structured in various sensible sections and subsectuions with help the reader. The Paragraphs and lists aid the reader understanding the topic.
+6. Describe the quality of the language.
+He remained factual. But don't adress the reader by you or yourself as we in the paper. E.g. subsection B "As you can see..."
+7. Do the figures support the process of reading and understanding? Would further figures be useful/necessary?
+Figure 4 should be on the bottom of the chapter 4 because it interuppts the reading of chapter 3, because it was not clear to which chapter it belongs to. Otherwise very uselful figures. No further figures needed.
+8. Describe the quality of the figures (Resolution, style, font size ...).
+perfect resolution. Good style font size and size good but maybe fig. 4 could have been smaller(did not print out)
+9. Is there a catchy/sensible caption for every figure? Are the figures mentioned in the text?
+Good captions except for fig. 4 which Algorithm does it show? Yes they are mentioned.
+10. Suggestions for improving the quality of the presentation.
+Delete the you and we.
+11. Are there references for all techniques, methods, protocols, etc. Is it clear where the statements/images/graphs have been taken from?
+Good References by ACM and IEEE etc. and every researched part was cited. It's not clear where the Data from fig. 3 comes from(no citation). The rest was clear.
+12. Do the citations, references, and the references list comply with the usual standards?
+Every standard is followed and well referenced. The references are reliable. Exepct for fig. 3 the Dataset should be referenced. 
+13. Is the paper correct? Are there any questionable or unjustifiably absolute statements?
+To my knowledge there were no wrong statements.
+
+Further comments to the author. Please give further information that can help the author to improve the paper.
+Maybe a bit short conclusion(many people read the conclusion first if they should read the paper).

@@ -1,0 +1,123 @@
+Review Form
+
+Please keep in mind that the review is meant to support the author with constructive and useful information that helps him/her to improve the quality of the paper. After reading your review, the author should know about the weaknesses of his/her paper and the author should also know how to fix these.
+Reviewing a paper requires careful preparation and reading. You might encounter parts of the paper that require to read additional literature (referenced in the paper) in order to understand them. Please have a look at this additional literature whenever necessary.
+-------------------------------------------
+
+Title of the paper:
+
+---------
+Reviewer
+---------
+
+Knowledge (Your knowledge about the topic):
+( ) No previous knowledge
+( ) Little knowledge
+( x ) Skilled
+( ) Expert
+
+------------
+Review
+------------
+
+Paper summary: Give a short summary of the contents of the paper and discuss the scientific aspects of the paper. [3-5 Sentences]
+
+The paper analyses the root of congestion control which is different types of delay. Congestion avoidance mechanisms try to interfere early on by detecting (slightly) raised levels of congestion in the network and adjust their sending window according to this. Apart from only hosts detecting congestion parts of the network - namely routers - can be able to detect congestion as well if the queue management supports it; such a congestion control algorithm is ECN which requires cooperation from routers and all hosts. Two additional protocols have been proposed in order to tackle congestion earlier on: XCP where the router plays an explicit role as well in calculating feedback and DCTCP which only optimises data centres to minimise the incast problem by implementing ECN and only slightly adjusting the window size.
+
+Paper strengths: What are the strengths of the paper. Mainly consider the content and the scientific quality of the paper. [3-5 Sentences]
+
+The structure of this paper is clear and makes sense. The topics covered were adequately explained. It is good that graphics are used to help readers understand the theme. Also, the references in the text are clearly marked.
+
+Paper weaknesses: What are the weaknesses of the paper. Mainly consider the content, structure, and the scientific quality of the paper. [3-5 Sentences]
+
+The abstract could be longer, and the content should be described there more precisely. The results should also be briefly explained in the abstract. Some terms are mentioned but not defined in detail. For example, congestion, buffer and the rule of thumb are mentioned without the reader knowing what distinguishes it. 
+
+Presentation of the paper: Quality and clarity of the presentation
+( ) Difficult to follow, badly written, and unorganized
+( ) Some difficulties regarding structure and clarity
+( x ) Well structured and well written with minor difficulties
+( ) Well structured and easy to read. Good presentation.
+
+Comments about the presentation of the paper: [at least two sentences per question]
+
+1. Is the paper well organized?
+
+The paper is well organised. There's a structure the reader follows and there are very few jumps between topics. A longer overview however at the beginning would have been useful. 
+
+2. Is there a clear structure that helps the reader to easily understand the contents of the paper?
+
+In section II in the bullet point list every point but the second one starts with the name of the delay. For consistency we suggest restructuring the second bullet point similar to the other points in the list. 
+
+Apart from this minor detail the paper is well structured and the sections neatly build up on each other so the connections between themselves become clear. 
+
+3. Do parts of the paper require further explanation? Are some parts poorly written, blurry, or inaccurate? Are there any contradicting statements?
+
+Within the introduction congestion should be explained so the reader understands what exactly the paper is about - congestion is unfortunately not explained at all.
+
+In the second section was not explained what exactly buffers are or do and what the rule of thumb suggest.
+
+In section III.A it is not 100% clear what methods every TCP implementation uses to perceive congestion. In III.B When talking about AIMD you could mention the sliding window scheme according to which TCP sends out the packets to make it a bit easier to understand. Furthermore, it's not clear in which connection slow start, AIDM, and the adaption (is it a period? what exactly is adaption?) stand to each other.  
+
+In section IV. ECN is described as 'This central algorithm is also called congestion control', however, there are many more CC algorithms, therefore, it is more precise to say, that ECN is 'a congestion control algorithm'. Even though you explain in section IB.B that ECN isn't tat widespread you could clarify that ECN is indeed not the only CC algorithm. 
+
+In section IV.A 'feedback' could be explained earlier on, ideally just when the term is introduces. It is furthermore not fully clear what the feedback looks like and how it is passed onto the packets: via a flag? Will the hosts be notified? How exactly is the max. sending rate acquired?  
+
+At the end of section IV.C it still isn't quite clear whether DCTCP is commonly used in data centres. 
+
+4. Is the paper complete? Does it contain all necessary parts (Abstract, introduction, main part, presentation of results / discussion, conclusion)? Do these parts serve their purpose?
+
+The abstract is a bit short. Furthermore, a clearer overview of the paper's structure in the introduction would guide the reader better through the paper. The rest however serves its purpose well: the main part appropriately presents and discuss the techniques and the conclusion sums up the paper nicely. 
+
+5. Is the text structured into paragraphs and sections? Does this structure aid the reader?
+
+The text is structured into paragraphs and sections.The sections have been divided logically. We would rename the third section to TCP congestion avoidance.This gives the reader an even better overview of the topic of the section. Overall the structure aid the reader. 
+
+6. Describe the quality of the language.
+
+The English level is generally good but some sentences are a bit cumbersome and unnecessarily wordy and a few very colloquial expressions are used. 
+There are some punctuation and spelling mistakes such as missing hyphens, missing or unnecessary commas, and incorrect article use. 
+
+7. Do the figures support the process of reading and understanding? Would further figures be useful/necessary?
+
+Figures generally support the understanding, however figure 1 doesn't present any additional information to reader and is therefore redundant. An additional figure showing differences of the congestion levels of TCP and XCP (and maybe DCTCP) could be neat but isn't necessary. 
+
+8. Describe the quality of the figures (Resolution, style, font size ...).
+
+The resolution is high and the figures are all of high quality. However, both font size and font itself could be adjusted to those of the paper. 
+
+9. Is there a catchy/sensible caption for every figure? Are the figures mentioned in the text?
+
+Figure 3 unfortunately isn't mentioned in the text (it does help in understanding the connection between slow start and AIDM). Overall, the captions provide the necessary information to easily understand the figures (even without the provided context). 
+
+10. Suggestions for improving the quality of the presentation.
+
+We think it would be a good idea to replace the bufferbloat section with a section called Biffersize. That is because bufferbloat is related to buffer sizing, which was described before. Therefore it would make sense to describe these two topics together in one bigger section.  
+
+11. Are there references for all techniques, methods, protocols, etc. Is it clear where the statements/images/graphs have been taken from?
+
+We are not sure if the images and graphs are self made but in case they're not the references to figure one, three, four and five are missing. Otherwise all sources were well marked.
+
+12. Do the citations, references, and the references list comply with the usual standards?
+
+Not all sources were listed in the same way. For example, in some references, the year is the last information and in some sources, the page numbers are final. In addition, some references lack information, such as the page number in the ninth reference.
+
+13. Is the paper correct? Are there any questionable or unjustifiably absolute statements?
+
+We did not find questionable or unjustifiably absolute statements.
+
+Further comments to the author. Please give further information that can help the author to improve the paper.
+
+Grammar and spelling:
+network-assisted, well-sized need a hyphen
+'This paper will present THE origins'
+There is a comma missing after 'secondly', after 'On the one hand', after introductory phrases such as 'Without proper buffer management'
+There are commas missing around 'for example', 'however', 'also' when used within the sentence
+''85 if the incoming traffic keeps EXCEEDING'
+'will be explained in the section '85' requires no article
+Remove commas in sentences where the comma separates subject and verb
+'The network's capacity' is a genitive form.
+'After the number of packets exeedS'
+There is no comma needed before 'but', 'because', 'since', 'while'
+
+LaTex layout: 
+Section IV.A: For a variable to have a subscript do the following $ H_{feedback} $. The subscript should be fully enclosed in the braces. Note that this is in math mode. }

@@ -1,0 +1,733 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{10.1145/1851275.1851192}{article}{}
+      \name{author}{8}{}{%
+        {{hash=21c3a07115a81fefe4f182bfa053b59a}{%
+           family={Alizadeh},
+           familyi={A\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8a2713cd3a286d6c3afe169095c435aa}{%
+           family={Greenberg},
+           familyi={G\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5df55f67425c878214218d04f1139449}{%
+           family={Maltz},
+           familyi={M\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ff5f2ad1629acf52018ec470b61bf2c9}{%
+           family={Padhye},
+           familyi={P\bibinitperiod},
+           given={Jitendra},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4540bd587c3d90fae939ef0c3ccd8def}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Parveen},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3deab4b93f68488c9ddf8ad69a5b6863}{%
+           family={Prabhakar},
+           familyi={P\bibinitperiod},
+           given={Balaji},
+           giveni={B\bibinitperiod}}}%
+        {{hash=10d17c34b05820a06dff0764226e0a4d}{%
+           family={Sengupta},
+           familyi={S\bibinitperiod},
+           given={Sudipta},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e838e31e37257e7be507624c00bd7953}{%
+           family={Sridharan},
+           familyi={S\bibinitperiod},
+           given={Murari},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{4d0d1086c827359746430494268b1352}
+      \strng{fullhash}{77e78556fee64e2682633e93ad12db1b}
+      \strng{bibnamehash}{4d0d1086c827359746430494268b1352}
+      \strng{authorbibnamehash}{4d0d1086c827359746430494268b1352}
+      \strng{authornamehash}{4d0d1086c827359746430494268b1352}
+      \strng{authorfullhash}{77e78556fee64e2682633e93ad12db1b}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIGCOMM Comput. Commun. Rev.}
+      \field{number}{4}
+      \field{title}{{Data Center TCP (DCTCP)}}
+      \field{volume}{40}
+      \field{year}{2010}
+      \true{nocite}
+      \field{pages}{63\bibrangedash 74}
+      \range{pages}{12}
+    \endentry
+    \entry{Allman13commentson}{article}{}
+      \name{author}{1}{}{%
+        {{hash=16106a5714a6a080fe22adcde1f7a047}{%
+           family={Allman},
+           familyi={A\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{16106a5714a6a080fe22adcde1f7a047}
+      \strng{fullhash}{16106a5714a6a080fe22adcde1f7a047}
+      \strng{bibnamehash}{16106a5714a6a080fe22adcde1f7a047}
+      \strng{authorbibnamehash}{16106a5714a6a080fe22adcde1f7a047}
+      \strng{authornamehash}{16106a5714a6a080fe22adcde1f7a047}
+      \strng{authorfullhash}{16106a5714a6a080fe22adcde1f7a047}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Communication Review}
+      \field{title}{{Comments on Bufferbloat}}
+      \field{year}{2013}
+      \true{nocite}
+      \field{pages}{31\bibrangedash 37}
+      \range{pages}{7}
+    \endentry
+    \entry{appenzeller2004sizing}{article}{}
+      \name{author}{3}{}{%
+        {{hash=69b8955c952e47af5fde4c4fec9a0669}{%
+           family={Appenzeller},
+           familyi={A\bibinitperiod},
+           given={Guido},
+           giveni={G\bibinitperiod}}}%
+        {{hash=25b5e84206ce85cfc64d27301793cc5f}{%
+           family={Keslassy},
+           familyi={K\bibinitperiod},
+           given={Isaac},
+           giveni={I\bibinitperiod}}}%
+        {{hash=de88a212b707ac15b1fde53c8cb71017}{%
+           family={McKeown},
+           familyi={M\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{cb824d927a227ca35b511f6e671e19bd}
+      \strng{fullhash}{cb824d927a227ca35b511f6e671e19bd}
+      \strng{bibnamehash}{cb824d927a227ca35b511f6e671e19bd}
+      \strng{authorbibnamehash}{cb824d927a227ca35b511f6e671e19bd}
+      \strng{authornamehash}{cb824d927a227ca35b511f6e671e19bd}
+      \strng{authorfullhash}{cb824d927a227ca35b511f6e671e19bd}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM SIGCOMM Computer Communication Review}
+      \field{number}{4}
+      \field{title}{{Sizing router buffers}}
+      \field{volume}{34}
+      \field{year}{2004}
+      \true{nocite}
+      \field{pages}{281\bibrangedash 292}
+      \range{pages}{12}
+    \endentry
+    \entry{6886125}{article}{}
+      \name{author}{1}{}{%
+        {{hash=574ee529f2a29ab614a600de8c231d51}{%
+           family={{Cerf}},
+           familyi={C\bibinitperiod},
+           given={V.\bibnamedelimi G.},
+           giveni={V\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{574ee529f2a29ab614a600de8c231d51}
+      \strng{fullhash}{574ee529f2a29ab614a600de8c231d51}
+      \strng{bibnamehash}{574ee529f2a29ab614a600de8c231d51}
+      \strng{authorbibnamehash}{574ee529f2a29ab614a600de8c231d51}
+      \strng{authornamehash}{574ee529f2a29ab614a600de8c231d51}
+      \strng{authorfullhash}{574ee529f2a29ab614a600de8c231d51}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Internet Computing}
+      \field{number}{5}
+      \field{title}{{Bufferbloat and Other Internet Challenges}}
+      \field{volume}{18}
+      \field{year}{2014}
+      \true{nocite}
+      \field{pages}{80\bibrangedash 80}
+      \range{pages}{1}
+    \endentry
+    \entry{10.1145/1592681.1592693}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=13f03f47937dfb717fea6201a142bd9d}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yanpei},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0687da4465846445b36b7800c1bb8038}{%
+           family={Griffith},
+           familyi={G\bibinitperiod},
+           given={Rean},
+           giveni={R\bibinitperiod}}}%
+        {{hash=fab91189eb5c7b5293436975c5b172ed}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Junda},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9d213316309bd0e96a3d09387dbe799b}{%
+           family={Katz},
+           familyi={K\bibinitperiod},
+           given={Randy\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=aeb54aa0c3d97e1b5901682fd058a86e}{%
+           family={Joseph},
+           familyi={J\bibinitperiod},
+           given={Anthony\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{1d3f85582cc168a67953f82a915c3060}
+      \strng{fullhash}{bb58b1ca6ec5d178f3e54a3b9487667e}
+      \strng{bibnamehash}{1d3f85582cc168a67953f82a915c3060}
+      \strng{authorbibnamehash}{1d3f85582cc168a67953f82a915c3060}
+      \strng{authornamehash}{1d3f85582cc168a67953f82a915c3060}
+      \strng{authorfullhash}{bb58b1ca6ec5d178f3e54a3b9487667e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 1st ACM Workshop on Research on Enterprise Networking}
+      \field{title}{{Understanding TCP Incast Throughput Collapse in Datacenter Networks}}
+      \field{year}{2009}
+      \true{nocite}
+      \field{pages}{73\bibrangedash 82}
+      \range{pages}{10}
+    \endentry
+    \entry{chen2014bufferbloat}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=38e7a8c3548234828b059f9b5d29afac}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yung-Chih},
+           giveni={Y\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=294e701b042477b3b60dee2c602a0be7}{%
+           family={Towsley},
+           familyi={T\bibinitperiod},
+           given={Don},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{11662df1de3fd323274568f81f5a82e6}
+      \strng{fullhash}{11662df1de3fd323274568f81f5a82e6}
+      \strng{bibnamehash}{11662df1de3fd323274568f81f5a82e6}
+      \strng{authorbibnamehash}{11662df1de3fd323274568f81f5a82e6}
+      \strng{authornamehash}{11662df1de3fd323274568f81f5a82e6}
+      \strng{authorfullhash}{11662df1de3fd323274568f81f5a82e6}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2014 IFIP Networking Conference}
+      \field{title}{{On bufferbloat and delay analysis of multipath TCP in wireless networks}}
+      \field{year}{2014}
+      \true{nocite}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+    \endentry
+    \entry{ietf-tcpm-rfc793bis-16}{report}{}
+      \name{author}{1}{}{%
+        {{hash=eff1d6e4dc522328e3ceeed671666aad}{%
+           family={Eddy},
+           familyi={E\bibinitperiod},
+           given={Wesley},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Internet Engineering Task Force}%
+      }
+      \strng{namehash}{eff1d6e4dc522328e3ceeed671666aad}
+      \strng{fullhash}{eff1d6e4dc522328e3ceeed671666aad}
+      \strng{bibnamehash}{eff1d6e4dc522328e3ceeed671666aad}
+      \strng{authorbibnamehash}{eff1d6e4dc522328e3ceeed671666aad}
+      \strng{authornamehash}{eff1d6e4dc522328e3ceeed671666aad}
+      \strng{authorfullhash}{eff1d6e4dc522328e3ceeed671666aad}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Work in Progress}
+      \field{title}{{Transmission Control Protocol Specification}}
+      \field{type}{techreport}
+      \field{year}{2020}
+      \true{nocite}
+    \endentry
+    \entry{10.1145/205511.205512}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bcb66fc187ba17e78c6c22747197aecf}{%
+           family={Floyd},
+           familyi={F\bibinitperiod},
+           given={Sally},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{bcb66fc187ba17e78c6c22747197aecf}
+      \strng{fullhash}{bcb66fc187ba17e78c6c22747197aecf}
+      \strng{bibnamehash}{bcb66fc187ba17e78c6c22747197aecf}
+      \strng{authorbibnamehash}{bcb66fc187ba17e78c6c22747197aecf}
+      \strng{authornamehash}{bcb66fc187ba17e78c6c22747197aecf}
+      \strng{authorfullhash}{bcb66fc187ba17e78c6c22747197aecf}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIGCOMM Comput. Commun. Rev.}
+      \field{number}{5}
+      \field{title}{{TCP and Explicit Congestion Notification}}
+      \field{volume}{24}
+      \field{year}{1994}
+      \true{nocite}
+      \field{pages}{8\bibrangedash 23}
+      \range{pages}{16}
+    \endentry
+    \entry{1209197}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=495f92384b02461f8ea1c8ae1c239a80}{%
+           family={{Fu}},
+           familyi={F\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=147dd8fd8b22577f846ad19c4cd86658}{%
+           family={{Zerfos}},
+           familyi={Z\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4ba8448e65d7980d88a22cc3b14445a5}{%
+           family={{Luo}},
+           familyi={L\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=1ef50857e114f08907fb07cb579b5e7e}{%
+           family={{Lu}},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6d96d6fbd106e2ffd88ad23ce0119654}{%
+           family={{Zhang}},
+           familyi={Z\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=1020fe3893784bdced05c1145c7f1582}{%
+           family={{Gerla}},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e1409952acc9de6fd7b7834eaa3cd10}
+      \strng{fullhash}{6ed160d7567d83481872da377cea150e}
+      \strng{bibnamehash}{8e1409952acc9de6fd7b7834eaa3cd10}
+      \strng{authorbibnamehash}{8e1409952acc9de6fd7b7834eaa3cd10}
+      \strng{authornamehash}{8e1409952acc9de6fd7b7834eaa3cd10}
+      \strng{authorfullhash}{6ed160d7567d83481872da377cea150e}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE INFOCOM 2003. Twenty-second Annual Joint Conference of the IEEE Computer and Communications Societies (IEEE Cat. No.03CH37428)}
+      \field{title}{{The impact of multihop wireless channel on TCP throughput and loss}}
+      \field{volume}{3}
+      \field{year}{2003}
+      \true{nocite}
+      \field{pages}{1744\bibrangedash 1753}
+      \range{pages}{10}
+    \endentry
+    \entry{gettys2012bufferbloat}{article}{}
+      \name{author}{2}{}{%
+        {{hash=39e7a25fdfe5df6a002b946f4fdb305b}{%
+           family={Gettys},
+           familyi={G\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b7f8cd60f6e059c641e4f3379d92a2e7}{%
+           family={Nichols},
+           familyi={N\bibinitperiod},
+           given={Kathleen},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \strng{fullhash}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \strng{bibnamehash}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \strng{authorbibnamehash}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \strng{authornamehash}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \strng{authorfullhash}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the ACM}
+      \field{number}{1}
+      \field{title}{{Bufferbloat: dark buffers in the internet}}
+      \field{volume}{55}
+      \field{year}{2012}
+      \true{nocite}
+      \field{pages}{57\bibrangedash 65}
+      \range{pages}{9}
+    \endentry
+    \entry{huston2000tcp}{article}{}
+      \name{author}{1}{}{%
+        {{hash=911f9629bce071a735ad398603b64a01}{%
+           family={Huston},
+           familyi={H\bibinitperiod},
+           given={Geoff},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{911f9629bce071a735ad398603b64a01}
+      \strng{fullhash}{911f9629bce071a735ad398603b64a01}
+      \strng{bibnamehash}{911f9629bce071a735ad398603b64a01}
+      \strng{authorbibnamehash}{911f9629bce071a735ad398603b64a01}
+      \strng{authornamehash}{911f9629bce071a735ad398603b64a01}
+      \strng{authorfullhash}{911f9629bce071a735ad398603b64a01}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Internet Protocol Journal}
+      \field{number}{2}
+      \field{title}{{Tcp performance}}
+      \field{volume}{3}
+      \field{year}{2000}
+      \true{nocite}
+      \field{pages}{2\bibrangedash 24}
+      \range{pages}{23}
+    \endentry
+    \entry{jacobson1995congestion}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2191d887ae31ebf1ef43a77dc25834c4}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={Van},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{2191d887ae31ebf1ef43a77dc25834c4}
+      \strng{fullhash}{2191d887ae31ebf1ef43a77dc25834c4}
+      \strng{bibnamehash}{2191d887ae31ebf1ef43a77dc25834c4}
+      \strng{authorbibnamehash}{2191d887ae31ebf1ef43a77dc25834c4}
+      \strng{authornamehash}{2191d887ae31ebf1ef43a77dc25834c4}
+      \strng{authorfullhash}{2191d887ae31ebf1ef43a77dc25834c4}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM SIGCOMM Computer Communication Review}
+      \field{number}{1}
+      \field{title}{{Congestion avoidance and control}}
+      \field{volume}{25}
+      \field{year}{1995}
+      \true{nocite}
+      \field{pages}{157\bibrangedash 187}
+      \range{pages}{31}
+    \endentry
+    \entry{jacobson1992tcp}{report}{}
+      \name{author}{3}{}{%
+        {{hash=2191d887ae31ebf1ef43a77dc25834c4}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={Van},
+           giveni={V\bibinitperiod}}}%
+        {{hash=05cac6577f13fc0793c9202abb0a6f1a}{%
+           family={Braden},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=799112d7918ff36193485240cd9cef61}{%
+           family={Borman},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {RFc 1323, May}%
+      }
+      \strng{namehash}{d9f317f379080ce440e46a53224341a0}
+      \strng{fullhash}{d9f317f379080ce440e46a53224341a0}
+      \strng{bibnamehash}{d9f317f379080ce440e46a53224341a0}
+      \strng{authorbibnamehash}{d9f317f379080ce440e46a53224341a0}
+      \strng{authornamehash}{d9f317f379080ce440e46a53224341a0}
+      \strng{authorfullhash}{d9f317f379080ce440e46a53224341a0}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{TCP extensions for high performance}}
+      \field{type}{techreport}
+      \field{year}{1992}
+      \true{nocite}
+    \endentry
+    \entry{katabi2002congestion}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=6e0ce061f94814a53a3c36cd68ac70ab}{%
+           family={Katabi},
+           familyi={K\bibinitperiod},
+           given={Dina},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f0c3de4c30a12b2fe342c0715424c86a}{%
+           family={Handley},
+           familyi={H\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=22e9b3045e3236f4c7e7ae862cfad57b}{%
+           family={Rohrs},
+           familyi={R\bibinitperiod},
+           given={Charlie},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed72504d6b1551748190815789b48de3}
+      \strng{fullhash}{ed72504d6b1551748190815789b48de3}
+      \strng{bibnamehash}{ed72504d6b1551748190815789b48de3}
+      \strng{authorbibnamehash}{ed72504d6b1551748190815789b48de3}
+      \strng{authornamehash}{ed72504d6b1551748190815789b48de3}
+      \strng{authorfullhash}{ed72504d6b1551748190815789b48de3}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2002 conference on Applications, technologies, architectures, and protocols for computer communications}
+      \field{title}{{Congestion control for high bandwidth-delay product networks}}
+      \field{year}{2002}
+      \true{nocite}
+      \field{pages}{89\bibrangedash 102}
+      \range{pages}{14}
+    \endentry
+    \entry{1498331}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=7644a9829160f647e205161e773bcdca}{%
+           family={{Low}},
+           familyi={L\bibinitperiod},
+           given={S.\bibnamedelimi H.},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=3c91a952f5b5558938b6b564787e8017}{%
+           family={{Andrew}},
+           familyi={A\bibinitperiod},
+           given={L.\bibnamedelimi L.\bibnamedelimi H.},
+           giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=a977f8926af0eb9b456a6468a76e1114}{%
+           family={{Wydrowski}},
+           familyi={W\bibinitperiod},
+           given={B.\bibnamedelimi P.},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{228a1baf3ec89da7fdf91082ed42454b}
+      \strng{fullhash}{228a1baf3ec89da7fdf91082ed42454b}
+      \strng{bibnamehash}{228a1baf3ec89da7fdf91082ed42454b}
+      \strng{authorbibnamehash}{228a1baf3ec89da7fdf91082ed42454b}
+      \strng{authornamehash}{228a1baf3ec89da7fdf91082ed42454b}
+      \strng{authorfullhash}{228a1baf3ec89da7fdf91082ed42454b}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings IEEE 24th Annual Joint Conference of the IEEE Computer and Communications Societies.}
+      \field{title}{{Understanding XCP: equilibrium and fairness}}
+      \field{volume}{2}
+      \field{year}{2005}
+      \true{nocite}
+      \field{pages}{1025\bibrangedash 1036}
+      \range{pages}{12}
+    \endentry
+    \entry{postel1981transmission}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=02b8dba2b9241ee3cbe59775cce0328d}{%
+           family={Postel},
+           familyi={P\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {STD 7, RFC 793, September}%
+      }
+      \strng{namehash}{c52fd6ef847982fd90ce07c9004d3a96}
+      \strng{fullhash}{c52fd6ef847982fd90ce07c9004d3a96}
+      \strng{bibnamehash}{c52fd6ef847982fd90ce07c9004d3a96}
+      \strng{authorbibnamehash}{c52fd6ef847982fd90ce07c9004d3a96}
+      \strng{authornamehash}{c52fd6ef847982fd90ce07c9004d3a96}
+      \strng{authorfullhash}{c52fd6ef847982fd90ce07c9004d3a96}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Transmission control protocol}}
+      \field{year}{1981}
+      \true{nocite}
+    \endentry
+    \entry{ramakrishnan1999proposal}{report}{}
+      \name{author}{2}{}{%
+        {{hash=4217d0a41c540231b47a5c7e0df71aa8}{%
+           family={Ramakrishnan},
+           familyi={R\bibinitperiod},
+           given={Kadangode},
+           giveni={K\bibinitperiod}}}%
+        {{hash=bcb66fc187ba17e78c6c22747197aecf}{%
+           family={Floyd},
+           familyi={F\bibinitperiod},
+           given={Sally},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {RFC 2481, January}%
+      }
+      \strng{namehash}{f401c479a54246e42aa36678eaeaa781}
+      \strng{fullhash}{f401c479a54246e42aa36678eaeaa781}
+      \strng{bibnamehash}{f401c479a54246e42aa36678eaeaa781}
+      \strng{authorbibnamehash}{f401c479a54246e42aa36678eaeaa781}
+      \strng{authornamehash}{f401c479a54246e42aa36678eaeaa781}
+      \strng{authorfullhash}{f401c479a54246e42aa36678eaeaa781}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{A proposal to add explicit congestion notification (ECN) to IP}}
+      \field{type}{techreport}
+      \field{year}{1999}
+      \true{nocite}
+    \endentry
+    \entry{ramakrishnan2001addition}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=4217d0a41c540231b47a5c7e0df71aa8}{%
+           family={Ramakrishnan},
+           familyi={R\bibinitperiod},
+           given={Kadangode},
+           giveni={K\bibinitperiod}}}%
+        {{hash=bcb66fc187ba17e78c6c22747197aecf}{%
+           family={Floyd},
+           familyi={F\bibinitperiod},
+           given={Sally},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8b0febed05d760696749e60595d40833}{%
+           family={Black},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {RFC 3168, September}%
+      }
+      \strng{namehash}{c59665fe41447adbbff2d5c3d3979547}
+      \strng{fullhash}{c59665fe41447adbbff2d5c3d3979547}
+      \strng{bibnamehash}{c59665fe41447adbbff2d5c3d3979547}
+      \strng{authorbibnamehash}{c59665fe41447adbbff2d5c3d3979547}
+      \strng{authornamehash}{c59665fe41447adbbff2d5c3d3979547}
+      \strng{authorfullhash}{c59665fe41447adbbff2d5c3d3979547}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The addition of explicit congestion notification (ECN) to IP}}
+      \field{year}{2001}
+      \true{nocite}
+    \endentry
+    \entry{staff2012bufferbloat}{article}{}
+      \name{author}{1}{}{%
+        {{hash=88cee267dd5abc31b5d444fabd57ad43}{%
+           family={Staff},
+           familyi={S\bibinitperiod},
+           given={CACM},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{88cee267dd5abc31b5d444fabd57ad43}
+      \strng{fullhash}{88cee267dd5abc31b5d444fabd57ad43}
+      \strng{bibnamehash}{88cee267dd5abc31b5d444fabd57ad43}
+      \strng{authorbibnamehash}{88cee267dd5abc31b5d444fabd57ad43}
+      \strng{authornamehash}{88cee267dd5abc31b5d444fabd57ad43}
+      \strng{authorfullhash}{88cee267dd5abc31b5d444fabd57ad43}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the ACM}
+      \field{number}{2}
+      \field{title}{{Bufferbloat: What's wrong with the internet?}}
+      \field{volume}{55}
+      \field{year}{2012}
+      \true{nocite}
+      \field{pages}{40\bibrangedash 47}
+      \range{pages}{8}
+    \endentry
+    \entry{villamizar1994high}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1cc5667e5cd06d26c6eb7c901a9d80a0}{%
+           family={Villamizar},
+           familyi={V\bibinitperiod},
+           given={Curtis},
+           giveni={C\bibinitperiod}}}%
+        {{hash=272a62e20982bc7a526b71a889f940ee}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Cheng},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{f7978066e3d002f45ae39ddc604f7294}
+      \strng{fullhash}{f7978066e3d002f45ae39ddc604f7294}
+      \strng{bibnamehash}{f7978066e3d002f45ae39ddc604f7294}
+      \strng{authorbibnamehash}{f7978066e3d002f45ae39ddc604f7294}
+      \strng{authornamehash}{f7978066e3d002f45ae39ddc604f7294}
+      \strng{authorfullhash}{f7978066e3d002f45ae39ddc604f7294}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM SIGCOMM Computer Communication Review}
+      \field{number}{5}
+      \field{title}{{High performance TCP in ANSNET}}
+      \field{volume}{24}
+      \field{year}{1994}
+      \true{nocite}
+      \field{pages}{45\bibrangedash 60}
+      \range{pages}{16}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

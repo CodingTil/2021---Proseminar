@@ -1,11 +1,13 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Origins of Congestion}{}% 2
-\BOOKMARK [1][-]{section.3}{Congestion Avoidance}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Perceiving Congestion}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Adjusting for Congestion}{section.3}% 5
-\BOOKMARK [1][-]{section.4}{Network-Assisted Congestion Control}{}% 6
-\BOOKMARK [2][-]{subsection.4.1}{XCP}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.2}{Evaluation of Network-Assisted Congestion Control}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.3}{DCTCP}{section.4}% 9
-\BOOKMARK [1][-]{section.5}{Conclusion}{}% 10
-\BOOKMARK [1][-]{section*.8}{References}{}% 11
+\BOOKMARK [2][-]{subsection.2.1}{Delay}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Buffers}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Congestion Avoidance}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Perceiving Congestion}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Adjusting for Congestion}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{Network-Assisted Congestion Control}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{XCP}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Evaluation of Network-Assisted Congestion Control}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{DCTCP}{section.4}% 11
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 12
+\BOOKMARK [1][-]{section*.8}{References}{}% 13
