@@ -158,13 +158,13 @@
 	\only<3->{
 	\begin{column}{.45\textwidth}
 		\begin{itemize}
-		\item Links have limitations.
-		\item<4-> Data is split up into smaller packets.
-		\item<5-> Network nodes contain buffers storing packets.
+		\item Links have limitations
+		\item<4-> Data is split up into smaller packets
+		\item<5-> Network nodes contain buffers storing packets
 		\end{itemize}
-		\only<5->{
+		\only<6->{
 		\begin{alertblock}{}
-		Origins of Congestion are versatile.
+		Origins of Congestion are versatile
 		\end{alertblock}
 		}
 	\end{column}
@@ -187,36 +187,36 @@
 \begin{frame}{Buffers}
 ~\\
 \begin{block}{Purpose}
-Buffers store packets in network nodes waiting for transmission.
+Buffers store packets in network nodes waiting for transmission
 \end{block}
 ~\\
 \only<2->{
 Sizing Buffers:
 \begin{itemize}
-\item Buffer size should be large enough to handle packet bursts.
-\item Too large buffers result in an increase of queuing delay and \textit{over-buffering}.
+\item Buffer size should be large enough to handle packet bursts
+\item Too large buffers result in an increase of queuing delay and \textit{over-buffering}
 \end{itemize}
 }
 ~\\
 \only<3->{
 \begin{enumerate}
-\item[$\Rightarrow$] Buffers should be designed according to their application environment.
+\item[$\Rightarrow$] Buffers should be designed according to their application environment
 \end{enumerate}
 }
 \end{frame}
 
 \begin{frame}{Bufferbloat}
 \begin{itemize}
-\item Refers to frequently full, excessively large buffers.
-\item<2-> Queued packets will not be dropped, resulting in:
-\only<2->{
+\item Refers to frequently full, excessively large buffers
+~\\~\\
+\item<2-> Queued packets will not be dropped
 	\begin{itemize}
-	\item Unnecessary network delay (\textit{latency}) and packet delay fluctuation (\textit{jitter}).
-	\item Increased congestion, as TCP is not being notified of congestion.
-	\item Decreases network throughput.
+	\item<2->[$\Rightarrow$] Increased congestion, as TCP is not being notified of congestion
+	\item<2->[$\Rightarrow$] Decreased network throughput
+	\item<2->[$\Rightarrow$] Unnecessary network delay (\textit{latency}), packet delay fluctuation (\textit{jitter})
 	\end{itemize}
-}
-\item<3-> With memory getting cheaper over the years, buffers saw an increase in size.
+~\\
+\item<3-> With memory getting cheaper over the years, buffers saw an increase in size
 \end{itemize}
 \end{frame}
 
@@ -247,14 +247,14 @@ Sizing Buffers:
 \only<2->{
 	\begin{column}{0.5\textwidth}
 		\begin{block}{Transmission Delay}
-			Depends on bandwidth and length of the connection.
+			Depends on bandwidth and length of the connection
 		\end{block}
 	\end{column}
 }
 \only<3->{
 	\begin{column}{0.5\textwidth}
 		\begin{block}{Processing Delay}
-			Time it takes to process a single packet.
+			Time it takes to process a single packet
 		\end{block}
 	\end{column}
 }
@@ -269,14 +269,14 @@ Sizing Buffers:
 \only<4->{
 	\begin{column}{0.5\textwidth}
 		\begin{block}{Inter-Packet Delay}
-			Allows the receiver to prepare for transmission.
+			Allows the receiver to prepare for transmission
 		\end{block}
 	\end{column}
 }
 \only<5->{
 	\begin{column}{0.5\textwidth}
 		\begin{block}{Queuing Delay}
-			Time a packet waits in the buffer waiting for transmission.
+			Time a packet waits in the buffer waiting for transmission
 		\end{block}
 	\end{column}
 }
@@ -316,9 +316,14 @@ Sizing Buffers:
 \end{column}
 \end{columns}
 ~\\~\\
-\only<2->{
+\only<3->{
 \begin{itemize}
-\item Congestion control algorithms can improve queuing delay, number of queued packets and buffer management.
+\item Congestion control algorithms improve
+	\begin{itemize}
+	\item Queuing delay
+	\item Buffer lengths
+	\item Buffer management
+	\end{itemize}
 \end{itemize}
 }
 \end{frame}
@@ -337,31 +342,17 @@ Sizing Buffers:
 ~\\
 \begin{block}{Transmission Control Protocol}
 \begin{itemize}
-\item Lives on transport layer, communicates with application layer via sockets ($\rightarrow$ ports) and uses IP as internet protocol ($\rightarrow$ TCP/IP).
-\item Ensures successful transmission of all data.
+\item Transport protocol
+\item Uses IP as internet protocol ($\rightarrow$ TCP/IP)
+\item<2-> Ensures successful transmission of all data
 \end{itemize}
 \end{block}
 \begin{itemize}
-\item<2-> Transmitted data needs to be acknowledged.
-\item<2-> Adjusts to the current state of congestion.
-\item<3-> Many different implementations exist.
+\item<3-> Transmitted data needs to be acknowledged
+\item<3-> Adjusts to the current state of congestion
+~\\~\\
+\item<4-> Many different implementations exist
 \end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{TCP Header}
-\centering
-\begin{figure}
-\centering
-\begin{bytefield}[bitheight=2.2\baselineskip, bitwidth=0.635\baselineskip]{32}
-\bitbox{16}{Source Port} & \bitbox{16}{Destination Port} \\
-\bitbox{32}{Sequence Number} \\
-\bitbox{32}{Acknowledgment Number} \\
-\bitbox{4}{Data Offset} & \bitbox{4}{Rsrvd} & \bitbox{1}{\tiny C\\W\\R} & \bitbox{1}{\tiny E\\C\\E} & \bitbox{1}{\tiny U\\R\\G} & \bitbox{1}{\tiny A\\C\\K} & \bitbox{1}{\tiny P\\S\\H} & \bitbox{1}{\tiny R\\S\\T} & \bitbox{1}{\tiny S\\Y\\N} & \bitbox{1}{\tiny F\\I\\N} & \bitbox{16}{Window Size} \\
-\bitbox{16}{Checksum} & \bitbox{16}{Urgent Pointer} \\
-\bitbox{32}{Options} \\
-\bitbox{32}{Data}
-\end{bytefield}
-\end{figure}
 \end{frame}
 
 \subsection*{Perceiving Congestion}
@@ -371,20 +362,20 @@ Sizing Buffers:
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{block}{Round-trip Time (\textit{RTT})}
-Describes the amount of time between sending a data packet and receiving its acknowledgment packet.
+Time between sending a data packet and receiving its acknowledgment packet
 \end{block}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{block}{Retransmission Timeout (\textit{RTO})}
-The maximum amount of time the sender will wait for the acknowledgment of a packet.
+Fixed upper limit to RTT
 \end{block}
 \end{column}
 \end{columns}
-~\\
+~\\~\\
 \only<2->{
 \begin{itemize}
-\item Classic TCP perceives congestion by detecting packet loss.
-\item Other implementations also perceive congestion by determining variations in RTT over time.
+\item Classic TCP perceives congestion by detecting packet loss
+\item<3-> Other implementations also perceive congestion by determining variances in RTT over time
 \end{itemize}
 }
 \end{frame}
@@ -417,7 +408,7 @@ The maximum amount of time the sender will wait for the acknowledgment of a pack
 	\only<2->{\path (s2) edge [dashed, above] node {\tiny B} (loss);}
 	\only<3->{\path (s3) edge [below] node {\tiny C} (r3);}
 	\only<4->{\path (r4) edge [above] node {\tiny A} (s4);}
-	\only<5->{\path (r6) edge [above] node {\tiny A} (s6);}
+	\only<5->{\path (r6) edge [above] node {\tiny A,C} (s6);}
 	
 	\draw[-] (Sender) -- (Sender2);
 	\draw[-] (Receiver) -- (Receiver2);
@@ -431,15 +422,19 @@ The maximum amount of time the sender will wait for the acknowledgment of a pack
 ~\\
 \begin{block}{Goal}
 \begin{itemize}
-\item Do not fill up buffers in the network.
-\item Achieve and hold maximum throughput.
-\item Adapt to the current state of congestion as quickly as possible.
+\item Do not fill up buffers in the network
+\item Achieve and hold maximum throughput
+\item Quickly adapt to congestion
 \end{itemize}
 \end{block}
 \only<2->{
 \begin{itemize}
-\item CA algorithms are based on Additive-Increase Multiplicative-Decrease principle.
-\item Variable $cwnd$ (congestion window) describes the maximum amount of data sent before ACKs are needed.
+\item Based on Additive-Increase Multiplicative-Decrease principle
+\item<3-> $cwnd$ (congestion window) variable
+	\begin{itemize}
+	\item Current data rate
+	\item Maintained by TCP Sender
+	\end{itemize}
 \end{itemize}
 }
 \end{frame}
@@ -447,12 +442,37 @@ The maximum amount of time the sender will wait for the acknowledgment of a pack
 \begin{frame}{Adaption - Additive Increase}
 ~\\
 \begin{block}{Formula}
-$cwnd \coloneqq cwnd + u$
+$cwnd \coloneqq cwnd + u$ for each received ACK packet
 \end{block}
 \begin{itemize}
-\item Increases the data rate slowly to reach the networks maximum throughput.
-\item Prevents the rapid filling of buffers.
-\item Proposed value for $u$: $\frac{1}{cwnd}$
+\item Linear increase in data rate
+\item Slow approach to the networks maximum throughput
+\item Prevents the rapid filling of buffers
+~\\~\\
+\item<2-> Proposed value for $u$: $\frac{1}{cwnd}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Adaption - Slow-Start}
+~\\
+\begin{block}{Formula}
+$cwnd \coloneqq cwnd + 1$ for each received ACK packet
+\\$\Rightarrow$ Exponential increase over time
+\end{block}
+\begin{itemize}
+\item Drastic Increase in data rate
+\item Quick increase in protocol performance
+~\\~\\
+\item<2-> Used after
+	\begin{itemize}
+	\item Connection establishment
+	\item Multiple packet losses
+	\end{itemize}
+\item<3-> Used until
+	\begin{itemize}
+	\item Slow-Start threshold has been exceeded
+	\item Perceived congestion
+	\end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -462,22 +482,10 @@ $cwnd \coloneqq cwnd + u$
 $cwnd \coloneqq d \cdot cwnd, 0<d<1$
 \end{block}
 \begin{itemize}
-\item Decreases the data rate drastically.
-\item Allows the nodes to recover and buffer lengths to decrease.
-\item Proposed value for $d$: $\frac{1}{2}$
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Adaption - Slow-Start}
-~\\
-\begin{block}{Formula}
-$cwnd \coloneqq cwnd + 1$ for each received ACK packet.
-\\$\Rightarrow$ Exponential increase over time.
-\end{block}
-\begin{itemize}
-\item Drastically increases the protocols performance.
-\item Used after connection is established or after multiple packet losses have been detected.
-\item Switches off after a threshold has been exceeded or congestion has been perceived.
+\item Decreases the data rate drastically
+\item Allows congested nodes and buffers to recover
+~\\~\\
+\item<2-> Proposed value for $d$: $\frac{1}{2}$
 \end{itemize}
 \end{frame}
 
@@ -521,16 +529,18 @@ $cwnd \coloneqq cwnd + 1$ for each received ACK packet.
 
 \begin{frame}{Network-assisted Congestion Control}
 \begin{itemize}
-\item Congestion Detection algorithms are very implicit:
+\item Congestion Detection algorithms are very implicit
 	\begin{itemize}
 	\item Packet loss may also have other causes
-	\item Methods are inaccurate, and do not inform about the degree of congestion.
+	\item No information about the degree of congestion
 	\end{itemize}
-\item[$\Rightarrow$] Creates unnecessary network delay.
+\item[$\Rightarrow$] Creates unnecessary network delay
 ~\\~\\
-\item<2-> Explicit congestion notification is crucial to keep the network stable.
-\item[$\Rightarrow$]<2-> Modify the IP header to include a \textit{Congestion Experienced} Flag (CE).
-\item<3-> \textit{Explicit congestion notification} (ECN), an extention to TCP/IP, implements this.
+\item<2-> \textit{Explicit congestion notification} (ECN)
+	\begin{itemize}
+	\item Extension to TCP/IP
+	\item Adds \textit{Congestion Experienced} Flag (CE) to the IP header
+	\end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -549,21 +559,21 @@ $cwnd \coloneqq cwnd + 1$ for each received ACK packet.
 			\path [line] (R1) -- (R2);
 			\path [line] (R2) -- (R3);
 			\path [line] (R3) -- (H2);
-			\path [line, dotted] (H2) -- ++(0,-35pt) -| (H1);
-			\node[below=0.9cm of R2] (text) [transition] {Congested Signal};
+			\only<5->{\path [line, dotted] (H2) -- ++(0,-35pt) -| (H1);}
+			\only<5->{\node[below=0.9cm of R2] (text) [transition] {Congested Signal};}
 			
 			%packets
 			\node[messageclosed,scale=0.5, fill=black!10] (P1) [above right=0.2cm and 1cm of H1] {};
-			\node[messageclosed,scale=0.5, fill=black!50] (P2) [above left=0.7cm and 0.3cm of R2] {};
-			\node[messageclosed,scale=0.5, fill=black!10] (P3) [above left=0.4cm and 0.2cm of R2] {};
-			\node[messageclosed,scale=0.5, fill=black!10] (P4) [above left=0.1cm and 0.1cm of R2] {};
-			\node[messageclosed,scale=0.5, fill=black!50] (P5) [above right=0.2cm and 1cm of R3] {};
+			\only<3->{\node[messageclosed,scale=0.5, fill=black!50] (P2) [above left=0.7cm and 0.3cm of R2] {};}
+			\only<2->{\node[messageclosed,scale=0.5, fill=black!10] (P3) [above left=0.4cm and 0.2cm of R2] {};}
+			\only<2->{\node[messageclosed,scale=0.5, fill=black!10] (P4) [above left=0.1cm and 0.1cm of R2] {};}
+			\only<4->{\node[messageclosed,scale=0.5, fill=black!50] (P5) [above right=0.2cm and 1cm of R3] {};}
 			\node[above left = 1.5cm and 0cm of R1] (P) [transition] {Packet};
-			\node[above right = 1.5cm and -0.3cm of R2] (CN) [transition] {Congested Node};
-			\node[above left = 1.5cm and -0.4cm of H2] (MP) [transition] {Marked Packet};
+			\only<2->{\node[above right = 1.5cm and -0.3cm of R2] (CN) [transition] {Congested Node};}
+			\only<4->{\node[above left = 1.5cm and -0.4cm of H2] (MP) [transition] {Marked Packet};}
 			\path [line] (P) -- (P1);
-			\path [line] (CN) -- (R2);
-			\path [line] (MP) -- (P5);
+			\only<2->{\path [line] (CN) -- (R2);}
+			\only<4->{\path [line] (MP) -- (P5);}
 		\end{tikzpicture}
 \end{figure}
 \end{center}
@@ -574,12 +584,13 @@ $cwnd \coloneqq cwnd + 1$ for each received ACK packet.
 \begin{frame}{XCP}
 ~\\
 \begin{block}{XCP}
-\textit{eXplicit Congestion Protocol} generalizes the ECN proposal.
+\textit{eXplicit Congestion Protocol} generalizes the ECN proposal
 \end{block}
 \begin{itemize}
-\item Improves upon ECN by introducing new packet control concepts.
-\item Additionally gives feedback about the degree of congestion.
+\item Introduces new packet control concepts
+\item Gives feedback about the degree of congestion
 \end{itemize}
+~\\
 \only<2->{
 \begin{block}{XCP Header}
 \begin{itemize}
@@ -593,19 +604,20 @@ $cwnd \coloneqq cwnd + 1$ for each received ACK packet.
 
 \begin{frame}{XCP Sender}
 \begin{itemize}
-\item As a TCP Sender, the XCP sender also keeps track of $cwnd$ and $RTT$ and deals with packet loss (retransmission).
+\item Maintains $cwnd$ and $RTT$
+\item Handles packet loss
 ~\\~\\
-\item On data packet depature, the XCP sender will:
+\item<2-> On data packet departure
 	\begin{itemize}
 	\item $H\_cwnd \coloneqq cwnd$
 	\item $H\_rtt \coloneqq RTT$
-	\item $H\_feedback \coloneqq \frac{r \cdot RTT - cwnd}{cwnd}$, where $r$ is the desired data rate.
+	\item $H\_feedback \coloneqq \frac{r \cdot RTT - cwnd}{cwnd}$, where $r$ is the desired data rate
 	\end{itemize}
-\item[$\Rightarrow$] The desired data rate can be reached in just one RTT.
+\item<2-> [$\Rightarrow$] The desired data rate can be reached in just one RTT
 ~\\~\\
-\item On ACK packet arrival, the XCP sender will adjust $cwnd$ according to the received feedback:
+\item<3-> On ACK packet arrival
 	\begin{itemize}
-	\item $cwnd \coloneqq max(cwnd + H\_feedback, s)$, where $s$ is the packet size.
+	\item $cwnd \coloneqq max(cwnd + H\_feedback, s)$, where $s$ is the packet size
 	\end{itemize}
 \end{itemize}
 \end{frame}
@@ -615,9 +627,8 @@ $cwnd \coloneqq cwnd + 1$ for each received ACK packet.
 \begin{column}{.5\textwidth}
 \begin{block}{Efficiency Controller (EC)}
 \begin{itemize}
-\item Maximizes link utilization.
-\item Minimizes queue lengths and packet drops.
-\item If the node is congested, feedback should be negative, otherwise positive.
+\item Maximizes link utilization
+\item Minimizes queue lengths and packet drops
 \end{itemize}
 \end{block}
 \end{column}
@@ -626,20 +637,23 @@ $cwnd \coloneqq cwnd + 1$ for each received ACK packet.
 \only<2->{
 \begin{block}{Fairness Controller (FC)}
 \begin{itemize}
-\item Divides feedback to packets fairly.
-\item If feedback > 0, equal division.
-\item If feedback < 0, division in proportion to the packets data rates.
+\item Divides feedback to all packets fairly
 \end{itemize}
 \end{block}
 }
 \end{column}
 \end{columns}
-
+~\\
 \only<3->{
 \begin{itemize}
-\item Computation of feedback reflecting the current degree of congestion at this node.
-\item Allocates bandwidth equally to all XCP senders.
+\item Computed feedback reflects the degree of congestion until this router
 \end{itemize}
+}
+~\\
+\only<4->{
+\begin{alertblock}{}
+Allocates bandwidth equally to all XCP senders
+\end{alertblock}
 }
 \end{frame}
 
@@ -648,20 +662,22 @@ $cwnd \coloneqq cwnd + 1$ for each received ACK packet.
 \begin{frame}{Evaluation of Congestion Control}
 Pros:
 \begin{itemize}
-\item XCP and ECN can easily outperform TCP/IP in certain conditions.
-\item Many networks could benefit from using congestion control.
+\item XCP and ECN outperforms TCP/IP
 \end{itemize}
 \only<2->{
 ~\\Cons:
 \begin{itemize}
-\item Many routers run on hardware only $\Rightarrow$ unrecognized packets will be dropped.
-\item Network-assisted congestion control often relies on active queue management.
+\item Many routers run on hardware only 
+	\begin{itemize}
+	\item[$\Rightarrow$] Unrecognized packets will be dropped
+	\end{itemize}
+\item Relies on active queue management
 \end{itemize}
 }
 ~\\
 \begin{itemize}
-\item<3->[$\Rightarrow$] Network-assisted congestion control protocols will not appear widespread in WANs.
-\item<4->[$\Rightarrow$] SANs could implement congestion control more easily.
+\item<3->[$\Rightarrow$] Not used in WANs
+\item<4->[$\Rightarrow$] Implementation in SANs more easily
 \end{itemize}
 \end{frame}
 
@@ -671,19 +687,19 @@ Pros:
 ~\\
 \begin{block}{Data center TCP}
 \begin{itemize}
-\item Extension to TCP for use in data centers.
-\item Based on ECN.
+\item Extension to TCP for use in data centers
+\item Based on ECN
 \end{itemize}
 \end{block}
 \begin{itemize}
-\item<2-> Tackles the TCP incast problem.
-\item<3-> Prevents bursty retransmissions by lowering RTO.
-\item<3-> Prevents link under-utilization:
+\item<2-> Tackles the TCP incast problem
+\item<3-> Prevents bursty retransmissions by lowering RTO
+\item<3-> Prevents link under-utilization
 \begin{itemize}
-\item <4-> Adjusts to congestion according to the fraction of packets that experienced congestion.
+\item <4-> Adjusts to congestion according to the fraction of packets that experienced congestion
 \end{itemize}
 ~\\~\\
-\item<5->[$\Rightarrow$] Implemented in many data centers.
+\item<5->[$\Rightarrow$] Implemented in many data centers
 \end{itemize}
 \end{frame}
 
@@ -701,26 +717,26 @@ Pros:
 \only<1->{
 \begin{block}{Origins of Congestion}
 \begin{itemize}
-\item Buffer size and Buffer management cause delay and packet loss.
-\item Queuing delay results in increased network delay.
+\item Buffer size and Buffer management cause delay and packet loss
+\item Queuing delay results in increased network delay
 \end{itemize}
 \end{block}
 }
 \only<2->{
 \begin{block}{Congestion Avoidance}
 \begin{itemize}
-\item Simple way to tackle congestion.
-\item Only gets implicit congestion notification.
-\item Often causes instead of resolving network stress.
+\item Simple way to tackle congestion
+\item Only gets implicit congestion notification
+\item Often causes instead of resolving network stress
 \end{itemize}
 \end{block}
 }
 \only<3->{
 \begin{block}{Network-assisted Congestion Control}
 \begin{itemize}
-\item Can explicitly control congestion.
-\item Results in overall better network performance.
-\item Implementations in WANs very challenging, successful in data centers.
+\item Can explicitly control congestion
+\item Results in overall better network performance
+\item Implementations in WANs very challenging, successful in data centers
 \end{itemize}
 \end{block}
 }
